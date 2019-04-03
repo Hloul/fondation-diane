@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="l10n_lb_chart_template" model="account.chart.template">
+            <field name="property_account_receivable_id" ref="lb_coa_411100"/>
+            <field name="property_account_payable_id" ref="lb_coa_401100"/>
+            <field name="property_account_expense_categ_id" ref="lb_coa_601000"/>
+            <field name="property_account_income_categ_id" ref="lb_coa_701000"/>
+            <field name="property_stock_account_input_categ_id" ref="lb_coa_605000"/>
+            <field name="property_stock_account_output_categ_id" ref="lb_coa_605000"/>
+            <field name="property_stock_valuation_account_id" ref="lb_coa_370000"/>
+            <field name="income_currency_exchange_account_id" ref="lb_coa_775000"/>
+            <field name="expense_currency_exchange_account_id" ref="lb_coa_675000"/>
+        </record>
+    </data>
+</odoo>

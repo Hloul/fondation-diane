@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record model="account.tax.template" id="vat_11_sales">
+            <field name="name">VAT on Sales</field>
+            <field name="description">VAT 11%</field>
+            <field name="amount" eval="11"/>
+            <field name="amount_type">percent</field>
+            <field name="chart_template_id" ref="l10n_lb_chart_template"/>
+            <field name="refund_account_id" ref="lb_coa_442700"/>
+            <field name="account_id" ref="lb_coa_442700"/>
+            <field name="type_tax_use">sale</field>
+            <field name="tax_group_id" ref="tax_group_tva_11"/>
+        </record>
+        <record model="account.tax.template" id="vat_11_costofsales">
+            <field name="name">VAT on Cost of Sales</field>
+            <field name="description">VAT 11%</field>
+            <field name="amount" eval="11"/>
+            <field name="amount_type">percent</field>
+            <field name="chart_template_id" ref="l10n_lb_chart_template"/>
+            <field name="refund_account_id" ref="lb_coa_442600"/>
+            <field name="account_id" ref="lb_coa_442600"/>
+            <field name="type_tax_use">purchase</field>
+            <field name="tax_group_id" ref="tax_group_tva_11"/>
+        </record>
+        <record model="account.tax.template" id="vat_11_expense">
+            <field name="name">VAT on Expenses</field>
+            <field name="description">VAT 11%</field>
+            <field name="amount" eval="11"/>
+            <field name="amount_type">percent</field>
+            <field name="chart_template_id" ref="l10n_lb_chart_template"/>
+            <field name="type_tax_use">purchase</field>
+            <field name="refund_account_id" ref="lb_coa_442610"/>
+            <field name="account_id" ref="lb_coa_442610"/>
+            <field name="tax_group_id" ref="tax_group_tva_11"/>
+        </record>
+        <record model="account.tax.template" id="vat_11_assets">
+            <field name="name">VAT on Assets</field>
+            <field name="description">VAT 11%</field>
+            <field name="amount" eval="11"/>
+            <field name="amount_type">percent</field>
+            <field name="chart_template_id" ref="l10n_lb_chart_template"/>
+            <field name="type_tax_use">purchase</field>
+            <field name="refund_account_id" ref="lb_coa_442620"/>
+            <field name="account_id" ref="lb_coa_442620"/>
+            <field name="tax_group_id" ref="tax_group_tva_11"/>
+        </record>
+</odoo>
