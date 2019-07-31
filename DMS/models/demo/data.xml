@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+   <odoo>
+    <record forcecreate="False" id="document_type_data_0" model="business.document">
+            <field name="sequence">1</field>
+            <field name="name">MOM</field>
+        </record>
+        <record forcecreate="False" id="document_type_data_1" model="business.document">
+            <field name="sequence">2</field>
+            <field name="name">Due Deligence</field>
+        </record>
+        </odoo>

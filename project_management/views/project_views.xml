@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+      <record id="edit_project" model="ir.ui.view">
+            <field name="name">project.project.form</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.edit_project"/>
+            <field name="arch" type="xml">
+                  <xpath expr="//field[@name='partner_id']" position="after">
+                        <field name="supervisor_id" string="Supervisor"/>
+                        <field name="leadmanager_id" string="Lead Manager"/>
+                        <field name="Analyst_id" string="Analyst"/>
+                        <field name="start_date"/>
+                        <field name="golive_date"/>
+                        <field name="status_id" string="Status"/>
+                        <field name="phase_id" string="Phase"/>
+                        <field name="category_id" string="Category"/>
+                        <field name="tag_ids" widget="many2many_tags" string="Tags"/>
+                        
+                  </xpath>
+            </field>
+</record>
+ <record id="view_project_project_filter" model="ir.ui.view">
+        <field name="name">project.project.select</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_project_filter"/>   
+        <field name="arch" type="xml">
+        <xpath expr="//filter[@name='Partner']" position="after">
+         <filter string="Status" name="Status" context="{'group_by': 'status_id'}"/>
+         <filter string="Phase" name="Phase" context="{'group_by': 'phase_id'}"/>
+         <filter string="Category" name="Category" context="{'group_by': 'category_id'}"/>
+        </xpath>
+        </field>
+       </record>
+<record id="view_project_kanban" model="ir.ui.view">
+       <field name="name">project.project.kanban</field>
+       <field name="model">project.project</field>
+       <field name="inherit_id" ref="project.view_project_kanban"/>
+       <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                  <field name="status_id"/>
+                  <field name="phase_id"/>
+                  <field name="category_id"/>
+                  <field name="tag_ids"/>
+            </xpath>
+            <xpath expr="//div[@class='o_primary']" position="after">
+                  <span t-if="record.status_id.value">
+                  <span>Status: <t t-esc="record.status_id.value"/></span>
+                  <br></br>
+                  </span>
+                  <span t-if="record.phase_id.value">
+                  <span>Phase: <t t-esc="record.phase_id.value"/></span>
+                  <br></br>
+                  </span>
+                  <span t-if="record.category_id.value">
+                  <span>Category: <t t-esc="record.category_id.value"/></span>
+                  </span>
+             </xpath>
+      </field>
+</record>
+</odoo>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="documents_view_form" model="ir.ui.view">
+        <field name="name">attachments form</field>
+        <field name="model">ir.attachment</field>
+        <field name="inherit_id" ref="documents.documents_view_form"/>   
+        <field name="arch" type="xml">
+        <xpath expr="//field[@name='name']" position="after">
+         <field name="documenttype_id"/>
+         <field name="doc_date"/>
+         <field name="doc_version"/>
+        </xpath>
+        <xpath expr="//field[@name='partner_id']" position="replace">
+        <field name="partner_id"  invisible="1"/>
+        </xpath>
+        <xpath expr="//field[@name='res_model']" position="replace">
+              <field name="res_model"  invisible="1" />
+        </xpath>
+        <xpath expr="//field[@name='res_model_name']" position="replace">
+              <field name="res_model_name" invisible="1"/>
+        </xpath>
+        <xpath expr="//field[@name='create_date']" position="replace">
+              <field name="create_date"  invisible="1"/>
+        </xpath>
+        <xpath expr="//field[@name='create_uid']" position="replace">
+              <field name="create_uid"  invisible="1"/>
+        </xpath>
+        <xpath expr="//field[@name='company_id']" position="replace">                
+              <field name="company_id"  invisible="1"/>
+        </xpath>
+        <xpath expr="//field[@name='mimetype']" position="replace">                
+                        <field name="mimetype"  invisible="1"/>
+        </xpath>
+        
+        </field>
+       </record> 
+
+       <record id="documents_view_list" model="ir.ui.view">
+       <field name="name">attachments list</field>
+       <field name="model">ir.attachment</field>
+       <field name="inherit_id" ref="documents.documents_view_list"/>
+       <field name="arch" type="xml">
+       <xpath expr="//field[@name='create_date']" position="after">
+            <field name="documenttype_id"/>
+        </xpath>
+      </field>
+</record>
+
+
+       <record id="documents_view_kanban" model="ir.ui.view">
+       <field name="name">ir.attachment kanban</field>
+       <field name="model">ir.attachment</field>
+       <field name="inherit_id" ref="base.view_attachment_search"/>
+       <field name="arch" type="xml">
+       <xpath expr="//filter[@name='by_model']" position="after">
+            <filter string="Document Type" name="documenttype_id" domain="[]" context="{'group_by': 'documenttype_id'}"/>
+        </xpath>
+
+      </field>
+</record>
+
+      <record id="edit_project" model="ir.ui.view">
+        <field name="name">project.project.form</field>
+        <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.edit_project"/>
+            <field name="arch" type="xml">
+            <xpath expr="//group[@name='misc']" position="before">
+            <h2>Document Types</h2>
+            <table>
+      <tr >
+       <th style="border: 1px solid #dddddd; text-align: center; padding: 8px;">MOM</th>
+       <th style="border: 1px solid #dddddd; text-align: center;padding: 8px;">Due Deligence</th>
+      <th style="border: 1px solid #dddddd; text-align: center;padding: 8px;">Confidentiality Agreement</th>
+      <th style="border: 1px solid #dddddd; text-align: center;padding: 8px;">Term Sheet</th>
+      <th style="border: 1px solid #dddddd; text-align: center;padding: 8px;">Investment Memo</th>
+      <th style="border: 1px solid #dddddd; text-align: center;padding: 8px;">Financial Model</th>
+      <th style="border: 1px solid #dddddd; text-align: center;padding: 8px;">Investor Presentation</th>
+      </tr>          
+	<tr > 
+		<td style="border: 1px solid #dddddd; text-align: center;padding: 8px;"><field name="mom_count"/></td> 
+		<td style="border: 1px solid #dddddd; text-align: center;padding: 8px;"><field name="dd_count"/></td> 
+		<td style="border: 1px solid #dddddd; text-align: center;padding: 8px;"><field name="ca_count"/></td> 
+		<td style="border: 1px solid #dddddd; text-align: center;padding: 8px;"><field name="ts_count"/></td> 
+		<td style="border: 1px solid #dddddd; text-align: center;padding: 8px;"><field name="im_count"/></td> 
+		<td style="border: 1px solid #dddddd; text-align: center;padding: 8px;"><field name="fm_count"/></td> 
+		<td style="border: 1px solid #dddddd; text-align: center;padding: 8px;"><field name="ip_count"/></td> 
+	</tr>
+</table>
+
+             </xpath>
+        </field>
+</record>
+
+</odoo>
+
