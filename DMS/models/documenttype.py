@@ -22,50 +22,95 @@ class ProjectDocuments(models.Model):
         momAttachment = self.env['ir.attachment']
         for project in self:
             project.mom_count = momAttachment.search_count([
-                ('documenttype_id.name', '=', 'MOM' )
+                '|',
+                '&',
+                ('documenttype_id', '=', 'MOM' ),
+                '&',
+                ('res_model', '=', 'project.project'), ('res_id', '=', project.id),
+                '&',
+                ('res_model', '=', 'project.task'), ('res_id', 'in', project.task_ids.ids)
+                
             ])
+       
     @api.multi
     def _compute_dd_attached_docs_count(self):
         ddAttachment = self.env['ir.attachment']
         for project in self:
             project.dd_count = ddAttachment.search_count([
-                ('documenttype_id.name', '=', 'Due Deligence' )
+                '|',
+                '&',
+                ('documenttype_id.name', '=', 'Due Deligence' ),
+                '&',
+                ('res_model', '=', 'project.project'), ('res_id', '=', project.id),
+                '&',
+                ('res_model', '=', 'project.task'), ('res_id', 'in', project.task_ids.ids)
+                
             ])
     @api.multi
     def _compute_ca_attached_docs_count(self):
         caAttachment = self.env['ir.attachment']
         for project in self:
             project.ca_count = caAttachment.search_count([
-                ('documenttype_id.name', '=', 'Confidentiality Agreement' )
-            ])
+                '|',
+                '&',
+               ('documenttype_id.name', '=', 'Confidentiality Agreement' ),
+                '&',
+                ('res_model', '=', 'project.project'), ('res_id', '=', project.id),
+                '&',
+                ('res_model', '=', 'project.task'), ('res_id', 'in', project.task_ids.ids)  
+                ])
     @api.multi
     def _compute_ts_attached_docs_count(self):
         tsAttachment = self.env['ir.attachment']
         for project in self:
-            project.ts_count = tsAttachment.search_count([
-                ('documenttype_id.name', '=', 'Term Sheet' )
-            ])
+            project.ts_count = tsAttachment.search_count([ 
+            '|',
+                '&',
+               ('documenttype_id.name', '=', 'Term Sheet' ),
+                '&',
+                ('res_model', '=', 'project.project'), ('res_id', '=', project.id),
+                '&',
+                ('res_model', '=', 'project.task'), ('res_id', 'in', project.task_ids.ids)  
+                ]) 
     @api.multi
     def _compute_im_attached_docs_count(self):
         Attachment = self.env['ir.attachment']
         for project in self:
             project.im_count = Attachment.search_count([
-                ('documenttype_id.name', '=', 'Investment Memo' )
-            ])
+                '|',
+                '&',
+               ('documenttype_id.name', '=', 'Investment Memo' ),
+                '&',
+                ('res_model', '=', 'project.project'), ('res_id', '=', project.id),
+                '&',
+                ('res_model', '=', 'project.task'), ('res_id', 'in', project.task_ids.ids)  
+                ]) 
     @api.multi
     def _compute_fm_attached_docs_count(self):
         fmAttachment = self.env['ir.attachment']
         for project in self:
             project.fm_count = fmAttachment.search_count([
-                ('documenttype_id.name', '=', 'Financial Model' )
-            ])
+                '|',
+                '&',
+               ('documenttype_id.name', '=', 'Financial Model' ),
+                '&',
+                ('res_model', '=', 'project.project'), ('res_id', '=', project.id),
+                '&',
+                ('res_model', '=', 'project.task'), ('res_id', 'in', project.task_ids.ids)  
+                ]) 
     @api.multi
     def _compute_ip_attached_docs_count(self):
         ipAttachment = self.env['ir.attachment']
         for project in self:
             project.ip_count = ipAttachment.search_count([
-                ('documenttype_id.name', '=', 'Investor Presentation' )
-            ])
+                '|',
+                '&',
+               ('documenttype_id.name', '=', 'Investor Presentation' ),
+                '&',
+                ('res_model', '=', 'project.project'), ('res_id', '=', project.id),
+                '&',
+                ('res_model', '=', 'project.task'), ('res_id', 'in', project.task_ids.ids)  
+                ])               
 class Docs(models.Model):
     _name='ir.attachment'
     _inherit='ir.attachment'

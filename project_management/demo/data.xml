@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record forcecreate="False" id="project_status_data_0" model="project.status">
+    <record forcecreate="False" id="project_phase_data_0" model="project.phase">
             <field name="sequence">1</field>
             <field name="name">In Progress</field>
         </record>
-        <record forcecreate="False" id="project_status_data_1" model="project.status">
+        <record forcecreate="False" id="project_phase_data_1" model="project.phase">
             <field name="sequence">2</field>
             <field name="name">On Hold</field>
         </record>
-        <record forcecreate="False" id="project_status_data_2" model="project.status">           
+        <record forcecreate="False" id="project_phase_data_2" model="project.phase">           
             <field name="sequence">3</field>
             <field name="name">Aborted</field>
         </record>
-        <record forcecreate="False" id="project_status_data_3" model="project.status">
+        <record forcecreate="False" id="project_phase_data_3" model="project.phase">
             <field name="sequence">4</field>
             <field name="name">Completed</field>
         </record>
         
-        <record forcecreate="False" id="project_phase_data_0" model="project.phase">
+        <record forcecreate="False" id="project_process_data_0" model="project.process">
             <field name="sequence">1</field>
             <field name="name">Origination</field>
         </record>
-        <record forcecreate="False" id="project_status_data_1" model="project.phase">
+        <record forcecreate="False" id="project_process_data_1" model="project.process">
             <field name="sequence">2</field>
             <field name="name">Arranging</field>
         </record>
-        <record forcecreate="False" id="project_status_data_2" model="project.phase">           
+        <record forcecreate="False" id="project_process_data_2" model="project.process">           
             <field name="sequence">3</field>
             <field name="name">Management</field>
         </record>
@@ -41,5 +41,24 @@
         <record forcecreate="False" id="project_category_data_2" model="project.category">           
             <field name="sequence">3</field>
             <field name="name">Investment</field>
+        </record>
+
+
+
+        <record forcecreate="False" id="project_status_data_0" model="project.status">
+            <field name="sequence">1</field>
+            <field name="name">Due</field>
+        </record>
+        <record forcecreate="False" id="project_status_data_1" model="project.status">
+            <field name="sequence">2</field>
+            <field name="name">Diligence</field>
+        </record>
+        <record forcecreate="False" id="project_status_data_2" model="project.status">           
+            <field name="sequence">3</field>
+            <field name="name">Closing</field>
+        </record>
+        <record forcecreate="False" id="project_status_data_3" model="project.status">           
+            <field name="sequence">3</field>
+            <field name="name">Follow-up</field>
         </record>
     </odoo>
