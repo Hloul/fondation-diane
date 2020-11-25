@@ -41,15 +41,22 @@ class AcquirerAreeba(models.Model):
         data = {
             "apiOperation": "CREATE_CHECKOUT_SESSION",
             "interaction": {
-              "operation": "PURCHASE",
-              "returnUrl": urls.url_join(base_url, '/payment/areeba/return/%s' % values['reference']),
-              "cancelUrl": urls.url_join(base_url, '/payment/areeba/cancel/%s' % values['reference']),
+                "operation": "PURCHASE",
+                "returnUrl": urls.url_join(base_url, '/payment/areeba/return/%s' % values['reference']),
+                "cancelUrl": urls.url_join(base_url, '/payment/areeba/cancel/%s' % values['reference']),
+                "displayControl": {
+                    "customerEmail": "OPTIONAL",
+                },
             },
             "order": {
                 "currency": values['currency'].name,
                 "id": values['reference'],
                 "amount": values['amount']
-            }
+            },
+            "customer": {
+                "email": values.get('billing_partner_email'),
+            },
+            "userId": values.get('billing_partner_id')
         }
         resp_data = self._areeba_request(url, data)
         areeba_tx_values.update({
@@ -117,6 +124,12 @@ class TxAreeba(models.Model):
         if status == 'SUCCESS':
             self._set_transaction_done()
             if self.state == 'done' and self.state != former_tx_state:
+                email = data.get('customer', {}).get('email')
+                if email:
+                    billing_partner_id = data.get('transaction') and int(data.get('transaction')[0].get('userId'))
+                    billing_partner = self.env['res.partner'].browse(billing_partner_id)
+                    if billing_partner.exists() and email != billing_partner.email:
+                        billing_partner.email = email
                 _logger.info('Validated Areeba payment for tx %s: set as done' % (self.reference))
                 return self.write(res)
             return True
