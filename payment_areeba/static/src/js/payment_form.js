@@ -6,7 +6,7 @@ odoo.define('payment_areeba.payment_form', function (require) {
     PaymentForm.include({
         willStart: function () {
             const script = document.createElement('script');
-            script.src = 'https://epayment.areeba.com/checkout/version/55/checkout.js';
+            script.src = 'https://epayment.areeba.com/checkout/version/60/checkout.js';
             script.setAttribute('data-error', 'errorCallback');
             document.head.append(script);
             window.errorCallback  = (err) => {
