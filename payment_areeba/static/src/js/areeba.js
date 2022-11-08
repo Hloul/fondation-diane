@@ -1,5 +1,5 @@
 odoo.define('payment_areeba.areeba', function (require) {
-    "use strict";
+
     
     require('web.dom_ready');
     if (!$('.o_payment_form').length) {
