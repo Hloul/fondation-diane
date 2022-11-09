@@ -1,5 +1,5 @@
 odoo.define('payment_areeba.payment_form', function (require) {
-   
+    "use strict";
     
     const PaymentForm = require('payment.payment_form');
     

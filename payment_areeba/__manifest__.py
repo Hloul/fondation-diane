@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-
+# updated code by kishan for a payment
 {
     'name': 'Areeba Payment Acquirer',
     'category': 'Accounting',
     'summary': 'Payment Acquirer: Areeba Implementation',
-    'version': '1.0',
+    'version': '1.0.0.2',
     'description': """Areeba Payment Acquirer""",
     'depends': ['payment'],
     'data': [

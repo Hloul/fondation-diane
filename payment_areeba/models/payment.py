@@ -30,6 +30,7 @@ class AcquirerAreeba(models.Model):
         }
         auth = ('merchant.%s' % self.areeba_merchant_id, self.areeba_api_password)
         resp = requests.request(method, url, auth=auth, data=json.dumps(data) if data else False, headers=headers)
+        # import pdb;pdb.set_trace()
         resp.raise_for_status()
         return resp.json()
 
@@ -37,7 +38,8 @@ class AcquirerAreeba(models.Model):
     def areeba_form_generate_values(self, values):
         base_url = self.get_base_url()
         areeba_tx_values = dict(values)
-        url = 'https://epayment.areeba.com/api/rest/version/60/merchant/%s/session' % self.areeba_merchant_id
+        url = 'https://ap-gateway.mastercard.com/api/rest/version/60/merchant/%s/session' % self.areeba_merchant_id
+        url = 'https://ap-gateway.mastercard.com/api/rest/version/60/merchant/%s/session' % self.areeba_merchant_id
         data = {
             "apiOperation": "CREATE_CHECKOUT_SESSION",
             "interaction": {
@@ -68,6 +70,7 @@ class AcquirerAreeba(models.Model):
             'merchant_street_2': self.company_id.street2,
         })
         if self.areeba_payment_logo:
+            # test_base_url = "https://localhost:8069/"
             areeba_tx_values['logo'] = urls.url_join(base_url, 'web/image/%s/%s/areeba_payment_logo' % (self._name, self.id))
 
         return areeba_tx_values
@@ -88,7 +91,7 @@ class TxAreeba(models.Model):
                 _logger.info(error_msg)
                 raise ValidationError(error_msg)
             acquirer = txs.acquirer_id
-            url = 'https://epayment.areeba.com/api/rest/version/60/merchant/%s/order/%s' % (acquirer.areeba_merchant_id, data)
+            url = 'https://ap-gateway.mastercard.com/api/rest/version/60/merchant/%s/order/%s' % (acquirer.areeba_merchant_id, data)
             data = acquirer._areeba_request(url, method="GET")
             _logger.info(
                 "Areeba: entering form_feedback with post data %s"
@@ -126,7 +129,11 @@ class TxAreeba(models.Model):
             if self.state == 'done' and self.state != former_tx_state:
                 email = data.get('customer', {}).get('email')
                 if email:
-                    billing_partner_id = data.get('transaction') and int(data.get('transaction')[0].get('userId'))
+                    if data.get('transaction')[0].get('userId'):
+                        user_id = int(data.get('transaction')[0].get('userId'))
+                    if data.get('transaction')[1].get('userId'):
+                        user_id = int(data.get('transaction')[1].get('userId'))
+                    billing_partner_id = data.get('transaction') and user_id
                     billing_partner = self.env['res.partner'].browse(billing_partner_id)
                     if billing_partner.exists() and email != billing_partner.email:
                         billing_partner.email = email
