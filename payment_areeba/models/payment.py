@@ -37,7 +37,7 @@ class AcquirerAreeba(models.Model):
     def areeba_form_generate_values(self, values):
         base_url = self.get_base_url()
         areeba_tx_values = dict(values)
-        url = 'https://ap-gateway.mastercard.com/api/rest/version/60/merchant/%s/session' % self.areeba_merchant_id
+        url = 'https://epayment.areeba.com/api/rest/version/60/merchant/%s/session' % self.areeba_merchant_id
         data = {
             "apiOperation": "CREATE_CHECKOUT_SESSION",
             "interaction": {
@@ -88,7 +88,7 @@ class TxAreeba(models.Model):
                 _logger.info(error_msg)
                 raise ValidationError(error_msg)
             acquirer = txs.acquirer_id
-            url = 'https://ap-gateway.mastercard.com/api/rest/version/60/merchant/%s/order/%s' % (acquirer.areeba_merchant_id, data)
+            url = 'https://epayment.areeba.com/api/rest/version/60/merchant/%s/order/%s' % (acquirer.areeba_merchant_id, data)
             data = acquirer._areeba_request(url, method="GET")
             _logger.info(
                 "Areeba: entering form_feedback with post data %s"
