@@ -8,7 +8,8 @@ import requests
 from werkzeug import urls
 
 from odoo import api, fields, models
-from odoo.addons.payment.models.payment_acquirer import ValidationError
+from odoo.addons.payment import ValidationError
+
 from odoo.tools.float_utils import float_compare
 
 
