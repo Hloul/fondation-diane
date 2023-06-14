@@ -15,7 +15,6 @@ class ProjectManagement(models.Model):
     start_date=fields.Date(string='Start Date')
     golive_date=fields.Date(string='Go Live Date')
 
-    @api.multi
     def write(self, vals):
         res = super(ProjectManagement, self).write(vals) if vals else True
         if  vals.get('privacy_visibilty') or vals.get('leadmanager_id'):

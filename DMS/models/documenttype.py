@@ -17,7 +17,6 @@ class ProjectDocuments(models.Model):
     ip_count = fields.Integer(string="Investor Presentation:",compute='_compute_ip_attached_docs_count', track_visibility="onchange")
     doctypes= fields.One2many('ir.attachment','documenttype_id',string='Document Types')
     
-    @api.multi
     def _compute_mom_attached_docs_count(self):
         momAttachment = self.env['ir.attachment']
         for project in self:
@@ -32,7 +31,6 @@ class ProjectDocuments(models.Model):
                 
             ])
        
-    @api.multi
     def _compute_dd_attached_docs_count(self):
         ddAttachment = self.env['ir.attachment']
         for project in self:
@@ -46,7 +44,7 @@ class ProjectDocuments(models.Model):
                 ('res_model', '=', 'project.task'), ('res_id', 'in', project.task_ids.ids)
                 
             ])
-    @api.multi
+
     def _compute_ca_attached_docs_count(self):
         caAttachment = self.env['ir.attachment']
         for project in self:
@@ -59,7 +57,7 @@ class ProjectDocuments(models.Model):
                 '&',
                 ('res_model', '=', 'project.task'), ('res_id', 'in', project.task_ids.ids)  
                 ])
-    @api.multi
+
     def _compute_ts_attached_docs_count(self):
         tsAttachment = self.env['ir.attachment']
         for project in self:
@@ -72,7 +70,7 @@ class ProjectDocuments(models.Model):
                 '&',
                 ('res_model', '=', 'project.task'), ('res_id', 'in', project.task_ids.ids)  
                 ]) 
-    @api.multi
+
     def _compute_im_attached_docs_count(self):
         Attachment = self.env['ir.attachment']
         for project in self:
@@ -85,7 +83,7 @@ class ProjectDocuments(models.Model):
                 '&',
                 ('res_model', '=', 'project.task'), ('res_id', 'in', project.task_ids.ids)  
                 ]) 
-    @api.multi
+
     def _compute_fm_attached_docs_count(self):
         fmAttachment = self.env['ir.attachment']
         for project in self:
@@ -98,7 +96,7 @@ class ProjectDocuments(models.Model):
                 '&',
                 ('res_model', '=', 'project.task'), ('res_id', 'in', project.task_ids.ids)  
                 ]) 
-    @api.multi
+
     def _compute_ip_attached_docs_count(self):
         ipAttachment = self.env['ir.attachment']
         for project in self:
@@ -111,6 +109,7 @@ class ProjectDocuments(models.Model):
                 '&',
                 ('res_model', '=', 'project.task'), ('res_id', 'in', project.task_ids.ids)  
                 ])               
+
 class Docs(models.Model):
     _name='ir.attachment'
     _inherit='ir.attachment'
