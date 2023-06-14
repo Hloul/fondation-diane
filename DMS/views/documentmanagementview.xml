@@ -17,11 +17,9 @@
         <xpath expr="//field[@name='res_model']" position="replace">
               <field name="res_model"  invisible="1" />
         </xpath>
-<!--
         <xpath expr="//field[@name='res_model_name']" position="replace">
               <field name="res_model_name" invisible="1"/>
         </xpath>
--->
         <xpath expr="//field[@name='create_date']" position="replace">
               <field name="create_date"  invisible="1"/>
         </xpath>
