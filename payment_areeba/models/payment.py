@@ -37,7 +37,7 @@ class AcquirerAreeba(models.Model):
         resp.raise_for_status()
         return resp.json()
 
-    @api.multi
+    
     def areeba_form_generate_values(self, values):
         base_url = self.get_base_url()
         areeba_tx_values = dict(values)
@@ -107,7 +107,6 @@ class TxAreeba(models.Model):
     def _areeba_form_get_tx_from_data(self, data):
         return data['payment_transaction']
 
-    @api.multi
     def _areeba_form_get_invalid_parameters(self, data):
         invalid_parameters = []
 
@@ -120,7 +119,6 @@ class TxAreeba(models.Model):
 
         return invalid_parameters
 
-    @api.multi
     def _areeba_form_validate(self, data):
         status = data.get('result')
         former_tx_state = self.state
