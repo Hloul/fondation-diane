@@ -19,7 +19,7 @@ _logger = logging.getLogger(__name__)
 
 
 class AcquirerAreeba(models.Model):
-    _inherit = 'payment.acquirer'
+    _inherit = 'payment.provider'
 
     provider = fields.Selection(selection_add=[('areeba', 'Areeba')])
     areeba_merchant_id = fields.Char('Areeba Merchant id', required_if_provider='areeba', groups='base.group_user')
