@@ -5,6 +5,7 @@
     'category': 'Accounting',
     'summary': 'Payment Acquirer: Areeba Implementation',
     'version': '1.0.0.2',
+    'license': 'AGPL-3',
     'description': """Areeba Payment Acquirer""",
     'depends': ['payment'],
     'data': [
