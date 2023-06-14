@@ -122,4 +122,5 @@ class BusinessDocument(models.Model):
     _name = 'business.document'
 
     name = fields.Char(string='Document Type', required=True, translate=True)
+    sequence = fields.Integer()
     documenttype_id = fields.One2many('ir.attachment','documenttype_id', string="Projects")
