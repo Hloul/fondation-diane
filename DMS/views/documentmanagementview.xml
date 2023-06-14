@@ -16,9 +16,11 @@
         <xpath expr="//field[@name='res_model']" position="replace">
               <field name="res_model"  invisible="1" />
         </xpath>
+<!--
         <xpath expr="//field[@name='res_model_name']" position="replace">
               <field name="res_model_name" invisible="1"/>
         </xpath>
+-->
         <xpath expr="//field[@name='create_date']" position="replace">
               <field name="create_date"  invisible="1"/>
         </xpath>
@@ -38,7 +40,7 @@
        <record id="documents_view_list" model="ir.ui.view">
        <field name="name">attachments list</field>
        <field name="model">ir.attachment</field>
-       <field name="inherit_id" ref="documents.documents_view_list"/>
+       <field name="inherit_id" ref="documents.document_view_list"/>
        <field name="arch" type="xml">
        <xpath expr="//field[@name='create_date']" position="after">
             <field name="documenttype_id"/>
@@ -64,7 +66,7 @@
         <field name="model">project.project</field>
             <field name="inherit_id" ref="project.edit_project"/>
             <field name="arch" type="xml">
-            <xpath expr="//group[@name='misc']" position="before">
+            <xpath expr="//group[@name='group_tasks_managment']" position="before">
             <h2>Document Types</h2>
             <table>
       <tr >
