@@ -12,7 +12,7 @@ class ProjectManagement(models.Model):
     tag_ids=fields.Many2many('project.tags', string='Tag')
     leadmanager_id=fields.Many2one('res.partner',string='Lead Manager')
     Analyst_id=fields.Many2one('res.partner',string='Analyst')
-    start_date=fields.Date(string='Start Date')
+    start_date=fields.Date(string='Starting Date')
     golive_date=fields.Date(string='Go Live Date')
 
     def write(self, vals):
