@@ -93,7 +93,7 @@ class TxAreeba(models.Model):
                     error_msg += '; multiple order found'
                 _logger.info(error_msg)
                 raise ValidationError(error_msg)
-            acquirer = txs.acquirer_id
+            acquirer = txs.provider_id
             url = 'https://ap-gateway.mastercard.com/api/rest/version/60/merchant/%s/order/%s' % (acquirer.areeba_merchant_id, data)
             data = acquirer._areeba_request(url, method="GET")
             _logger.info(
