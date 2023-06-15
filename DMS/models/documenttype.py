@@ -8,13 +8,13 @@ class ProjectDocuments(models.Model):
 
     label_document = fields.Char(string='Use documents as', default=lambda s: _('Documents'), translate=True,
     help="Gives label to documents on project's kanban view.")    
-    mom_count = fields.Integer(string="MOM:",compute='_compute_mom_attached_docs_count',track_visibility="onchange")
-    dd_count = fields.Integer(string="Due Deligence:",compute='_compute_dd_attached_docs_count', track_visibility="onchange")
-    ca_count = fields.Integer(string="Confidentiality Agreement:",compute='_compute_ca_attached_docs_count', track_visibility="onchange")
-    ts_count = fields.Integer(string="Term Sheet:",compute='_compute_ts_attached_docs_count', track_visibility="onchange")
-    im_count = fields.Integer(string="Investment Memo:",compute='_compute_im_attached_docs_count', track_visibility="onchange")
-    fm_count = fields.Integer(string="Financial Model:",compute='_compute_fm_attached_docs_count', track_visibility="onchange")
-    ip_count = fields.Integer(string="Investor Presentation:",compute='_compute_ip_attached_docs_count', track_visibility="onchange")
+    mom_count = fields.Integer(string="MOM:",compute='_compute_mom_attached_docs_count')
+    dd_count = fields.Integer(string="Due Deligence:",compute='_compute_dd_attached_docs_count')
+    ca_count = fields.Integer(string="Confidentiality Agreement:",compute='_compute_ca_attached_docs_count')
+    ts_count = fields.Integer(string="Term Sheet:",compute='_compute_ts_attached_docs_count')
+    im_count = fields.Integer(string="Investment Memo:",compute='_compute_im_attached_docs_count')
+    fm_count = fields.Integer(string="Financial Model:",compute='_compute_fm_attached_docs_count')
+    ip_count = fields.Integer(string="Investor Presentation:",compute='_compute_ip_attached_docs_count')
     doctypes= fields.One2many('ir.attachment','documenttype_id',string='Document Types')
     
     def _compute_mom_attached_docs_count(self):
@@ -113,7 +113,7 @@ class ProjectDocuments(models.Model):
 class Docs(models.Model):
     _name='ir.attachment'
     _inherit='ir.attachment'
-    documenttype_id=fields.Many2one('business.document',string='Document Type',track_visibility="onchange")
+    documenttype_id=fields.Many2one('business.document',string='Document Type')
     doc_date=fields.Date(string='Document Date')
     doc_version=fields.Float(string='Document Version')
 
