@@ -1,178 +1,178 @@
-id,code,name,user_type_id/id,chart_template_id/id,reconcile,tag_ids/id
-lb_coa_101000,101000,Capital,account.data_account_type_equity,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_102000,102000,Issuance Premiums,account.data_account_type_equity,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_111000,111000,Legal Reserve,account.data_account_type_equity,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_112000,112000,Statutory And Contractual Reserves,account.data_account_type_equity,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_119000,119000,Other Reserves,account.data_account_type_equity,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_121000,121000,Brought Forward Results - Profits,account.data_account_type_equity,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_125000,125000,Brought Forward Results - Losses,account.data_account_type_equity,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_138000,138000,Current Year Results - Profits,account.data_unaffected_earnings,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_139000,139000,Current Year Results - Losses,account.data_account_type_equity,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_151100,151100,Provisions For Litigations and Alike,account.data_account_type_non_current_liabilities,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_155100,155100,Provisions for Deferred Charges,account.data_account_type_non_current_liabilities,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_155200,155200,Provisions for Personnel End of Service Indemnity,account.data_account_type_non_current_liabilities,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_161000,161000,Long Term Loans Against Bonds,account.data_account_type_non_current_liabilities,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_162000,162000,Long Term Loans from Banks,account.data_account_type_non_current_liabilities,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_168000,168000,Shareholder Loan,account.data_account_type_non_current_liabilities,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_212000,212000,Formation Expenses,account.data_account_type_fixed_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_214000,214000,"Assets - Patents, Licenses, Trade Marks & Alike",account.data_account_type_fixed_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_219100,219100,Assets - Softwares,account.data_account_type_fixed_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_221000,221000,Assets - Lands,account.data_account_type_fixed_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_223000,223000,Assets - Buildings & Contructions,account.data_account_type_fixed_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_224000,224000,Assets - Machinery and Equipment,account.data_account_type_fixed_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_225000,225000,Assets - Vehicles & Handling Equipment,account.data_account_type_fixed_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_226100,226100,Assets - Decor and Improvements,account.data_account_type_fixed_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_226210,226210,Assets - Office Equipment,account.data_account_type_fixed_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_226220,226220,Assets - Computer Equipment,account.data_account_type_fixed_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_226300,226300,Assets - Furnitures and Accessories,account.data_account_type_fixed_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_251000,251000,Equity Participations,account.data_account_type_equity,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_253100,253100,Ownership Deeds (Shares & Parts),account.data_account_type_equity,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_255100,255100,Loans to Partners/Affiliates,account.data_account_type_non_current_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_259000,259000,Deposits and Guarantees,account.data_account_type_non_current_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_281100,281100,Amortization of Formation Expenses,account.data_account_type_fixed_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_281300,281300,"Amortization of Patents, Licenses, Trade Marks",account.data_account_type_fixed_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_281900,281900,Amortization of Softwares,account.data_account_type_fixed_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_282100,282100,Depreciation of Lands,account.data_account_type_fixed_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_282300,282300,Depreciation of Buildings & Constructions,account.data_account_type_fixed_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_282400,282400,Depreciation of Machinery and Equipment,account.data_account_type_fixed_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_282500,282500,Depreciation of Vehicles & Handling Equipment,account.data_account_type_fixed_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_282610,282610,Depreciation of Decor and Improvements,account.data_account_type_fixed_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_282621,282621,Depreciation of Office Equipment,account.data_account_type_fixed_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_282622,282622,Depreciation of Computer Equipment,account.data_account_type_fixed_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_282630,282630,"Depreciation of Furnitures, Fixtures and Accessories",account.data_account_type_fixed_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_370000,370000,Inventories - Purchased Finished Goods,account.data_account_type_current_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_370050,370050,Inventories - Revaluation,account.data_account_type_current_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_397000,397000,Deval. Provision for Purchased Finished Goods,account.data_account_type_current_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_401100,401100,Suppliers - Cost of Sales,account.data_account_type_payable,l10n_lb.l10n_lb_chart_template,Yes,
-lb_coa_403100,403100,Suppliers - Fixed Assets,account.data_account_type_payable,l10n_lb.l10n_lb_chart_template,Yes,
-lb_coa_409000,409000,Advances to Suppliers,account.data_account_type_current_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_411100,411100,Customers - Receivables,account.data_account_type_receivable,l10n_lb.l10n_lb_chart_template,Yes,
-lb_coa_411500,411500,Doubtful Customers,account.data_account_type_receivable,l10n_lb.l10n_lb_chart_template,Yes,
-lb_coa_419000,419000,Advances Received on Sales Orders,account.data_account_type_current_liabilities,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_421110,421110,Salaries and Wages due to Personnel,account.data_account_type_payable,l10n_lb.l10n_lb_chart_template,Yes,
-lb_coa_421120,421120,Missions due to Personnel,account.data_account_type_payable,l10n_lb.l10n_lb_chart_template,Yes,
-lb_coa_428100,428100,Loans to Personnel,account.data_account_type_current_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_431000,431000,Social Security Payables,account.data_account_type_current_liabilities,l10n_lb.l10n_lb_chart_template,Yes,
-lb_coa_438000,438000,Social Security Receivables,account.data_account_type_current_assets,l10n_lb.l10n_lb_chart_template,Yes,
-lb_coa_441100,441100,Taxes and Duties - Salaries,account.data_account_type_current_liabilities,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_441110,441110,Taxes and Duties - Non Resident Withholding Tax,account.data_account_type_current_liabilities,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_442500,442500,Value Added Tax - Due,account.data_account_type_current_liabilities,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_442600,442600,Value Added Tax - Paid On Purchases,account.data_account_type_current_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_442610,442610,Value Added Tax - Paid On Expenses,account.data_account_type_current_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_442620,442620,Value Added Tax - Paid On Assets,account.data_account_type_current_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_442700,442700,Value Added Tax - Collected On Revenues,account.data_account_type_current_liabilities,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_442900,442900,Value Added Tax - To be Refunded,account.data_account_type_current_liabilities,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_443100,443100,Income Tax on Profits,account.data_account_type_current_liabilities,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_451110,451110,Mother Company - Current Accounts,account.data_account_type_current_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_451120,451120,Affiliated Companies - Current Accounts,account.data_account_type_current_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_451130,451130,Sister Companies - Current Accounts,account.data_account_type_current_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_451500,451500,Partners - Current Accounts,account.data_account_type_current_assets,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_453000,453000,Dividends Payable,account.data_account_type_current_liabilities,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_459200,459200,"Shareholders - Subscribed, Called and Unpaid Capital",account.data_account_type_equity,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_461900,461900,Other Operating Creditor Accounts,account.data_account_type_payable,l10n_lb.l10n_lb_chart_template,Yes,
-lb_coa_472000,472000,Prepaid Charges,account.data_account_type_prepayments,l10n_lb.l10n_lb_chart_template,No,
-lb_coa_474000,474000,Accrued Unpaid Charges,account.data_account_type_payable,l10n_lb.l10n_lb_chart_template,Yes,
-lb_coa_491100,491100,Provisions for Customers Bad Debts,account.data_account_type_receivable,l10n_lb.l10n_lb_chart_template,Yes,
-lb_coa_512000,512000,Banks,account.data_account_type_liquidity,l10n_lb.l10n_lb_chart_template,Yes,
-lb_coa_530000,530000,Petty Cash,account.data_account_type_liquidity,l10n_lb.l10n_lb_chart_template,Yes,
-lb_coa_580000,580000,Bank Transfer,account.data_account_type_liquidity,l10n_lb.l10n_lb_chart_template,Yes,
-lb_coa_601000,601000,Purchase of Goods - Supplier,account.data_account_type_direct_costs,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_601810,601810,Purchase of Goods - Freight,account.data_account_type_direct_costs,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_601830,601830,Purchase of Goods - Insurance,account.data_account_type_direct_costs,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_601840,601840,Purchase of Goods - Clearance,account.data_account_type_direct_costs,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_601850,601850,Purchase of Goods - Customs,account.data_account_type_direct_costs,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_605000,605000,Inventory Variance of Finished Goods,account.data_account_type_direct_costs,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_605050,605050,Inventory Revaluation,account.data_account_type_direct_costs,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_621100,621100,Purchase of Works from Sub-Contractors,account.data_account_type_direct_costs,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_621200,621200,Purchase of Services,account.data_account_type_direct_costs,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_625000,625000,"Leasing, Patent Fees & Royalties",account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_investing
-lb_coa_626110,626110,Transportation of promotional material,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626130,626130,Taxis,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626150,626150,Postage,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626151,626151,International telecom,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626152,626152,Local telecom,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626153,626153,GSM ,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626154,626154,Internet access provider,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626210,626210,Maintenance and repairs,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626250,626250,Office cleaning,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626310,626310,Office rental,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626311,626311,Car rental,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626312,626312,Housing rental,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626320,626320,Office and housing rental related charges,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626323,626323,Equipment rental,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626410,626410,Internal meetings and receptions,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626415,626415,Staff entertainment,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626416,626416,Other entertainment,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626420,626420,Plane tickets,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626423,626423,Other travel expenses,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626426,626426,Hotel accomodation,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626430,626430,Personnel Meals Expenses,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626510,626510,Interim Staff Fees,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626530,626530,Professional fees and honorarium,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626531,626531,Legal and tax counsel fees,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
-lb_coa_626532,626532,Auditors fees,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
-lb_coa_626610,626610,Training fees,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626700,626700,Research & Studies Fees,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_investing
-lb_coa_626810,626810,Life insurance,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626910,626910,Health insurance,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626930,626930,Promotional material,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626931,626931,Advertising agencies fees,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626935,626935,Printing fees,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626936,626936,Subscriptions to literature,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626945,626945,Office Supplies,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626950,626950,Electricity,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626951,626951,Fuel and gas,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626955,626955,Parking,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626960,626960,Non capitalized office equipment,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626970,626970,Work and residence permits,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_626971,626971,Formalities,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_631110,631110,Salaries,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_631120,631120,Salaries - expenses deduction,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_631130,631130,Incentives,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_631150,631150,Employee transportation,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_631160,631160,Schooling allowance,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_631170,631170,Taxable benefits,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_631180,631180,Overtime,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_631190,631190,Paid leave,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_635110,635110,Social Security - Family,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_635120,635120,Social Security - Medical,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_635130,635130,Social Security - EOS,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_642000,642000,Municipal Taxes,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_645000,645000,Other taxes,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_645010,645010,Stamps,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_645620,645620,VAT on Purchases,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_645630,645630,VAT on Expenses,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_651110,651110,Depreciation - Establishment expenses,account.data_account_type_depreciation,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
-lb_coa_651130,651130,"Depreciation - Patents, Licenses, Trade Marks",account.data_account_type_depreciation,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
-lb_coa_651190,651190,Depreciation - Software,account.data_account_type_depreciation,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
-lb_coa_651210,651210,Depreciation - Lands,account.data_account_type_depreciation,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
-lb_coa_651230,651230,Depreciation - Building & Constructions,account.data_account_type_depreciation,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
-lb_coa_651240,651240,Depreciation - Machinery & Equipment,account.data_account_type_depreciation,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
-lb_coa_651250,651250,Depreciation - Vehicles & Handling Equipment,account.data_account_type_depreciation,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
-lb_coa_651261,651261,Depreciation - Decor & Improvements,account.data_account_type_depreciation,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
-lb_coa_651262,651262,Depreciation - Office Equipment,account.data_account_type_depreciation,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
-lb_coa_651263,651263,Depreciation - Computers Equipment,account.data_account_type_depreciation,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
-lb_coa_651264,651264,Depreciation - Furniture,account.data_account_type_depreciation,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
-lb_coa_655000,655000,Provisions Allocations For Charges,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_673620,673620,Bank charges,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
-lb_coa_673630,673630,Bank interests - expense,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
-lb_coa_675000,675000,Realized exchange difference - loss,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
-lb_coa_675010,675010,Unrealized exchange difference - loss,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
-lb_coa_675100,675100,Negative rounding,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
-lb_coa_681100,681100,Net Book Value of Disposed Intangible Assets,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
-lb_coa_681200,681200,Net Book Value of Disposed Tangible Assets,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
-lb_coa_685110,685110,Gifts & Donations,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_685130,685130,Social Security penalties,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_690000,690000,Taxes on Profits,account.data_account_type_expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
-lb_coa_701000,701000,Sales of Goods,account.data_account_type_revenue,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_709000,709000,Discount on Sales of Goods,account.data_account_type_revenue,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_713010,713000,Sales of Services,account.data_account_type_revenue,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_719000,719000,Discount on Sales of Services,account.data_account_type_revenue,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_755210,755210,Reversal of Prov. Deferred Charges,account.data_account_type_revenue,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
-lb_coa_771000,771000,Revenues of Equity Participations,account.data_account_type_revenue,l10n_lb.l10n_lb_chart_template,No,account.account_tag_investing
-lb_coa_773000,773000,Bank interests - income,account.data_account_type_revenue,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
-lb_coa_775000,775000,Realized exchange difference - gain,account.data_account_type_revenue,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
-lb_coa_775010,775010,Unrealized exchange difference - gain,account.data_account_type_revenue,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
-lb_coa_775100,775100,Positive rounding,account.data_account_type_revenue,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
-lb_coa_781100,781100,Income from Disposal of Intangible Assets,account.data_account_type_revenue,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
-lb_coa_781200,781200,Income from Disposal of Tangible Assets,account.data_account_type_revenue,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
+id,code,name,account_type,chart_template_id/id,reconcile,tag_ids/id
+lb_coa_101000,101000,Capital,Equity,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_102000,102000,Issuance Premiums,Equity,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_111000,111000,Legal Reserve,Equity,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_112000,112000,Statutory And Contractual Reserves,Equity,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_119000,119000,Other Reserves,Equity,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_121000,121000,Brought Forward Results - Profits,Equity,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_125000,125000,Brought Forward Results - Losses,Equity,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_138000,138000,Current Year Results - Profits,Current Year Earnings,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_139000,139000,Current Year Results - Losses,Equity,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_151100,151100,Provisions For Litigations and Alike,Non-current Liabilities,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_155100,155100,Provisions for Deferred Charges,Non-current Liabilities,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_155200,155200,Provisions for Personnel End of Service Indemnity,Non-current Liabilities,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_161000,161000,Long Term Loans Against Bonds,Non-current Liabilities,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_162000,162000,Long Term Loans from Banks,Non-current Liabilities,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_168000,168000,Shareholder Loan,Non-current Liabilities,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_212000,212000,Formation Expenses,Fixed Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_214000,214000,"Assets - Patents, Licenses, Trade Marks & Alike",Fixed Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_219100,219100,Assets - Softwares,Fixed Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_221000,221000,Assets - Lands,Fixed Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_223000,223000,Assets - Buildings & Contructions,Fixed Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_224000,224000,Assets - Machinery and Equipment,Fixed Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_225000,225000,Assets - Vehicles & Handling Equipment,Fixed Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_226100,226100,Assets - Decor and Improvements,Fixed Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_226210,226210,Assets - Office Equipment,Fixed Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_226220,226220,Assets - Computer Equipment,Fixed Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_226300,226300,Assets - Furnitures and Accessories,Fixed Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_251000,251000,Equity Participations,Equity,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_253100,253100,Ownership Deeds (Shares & Parts),Equity,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_255100,255100,Loans to Partners/Affiliates,Non-current Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_259000,259000,Deposits and Guarantees,Non-current Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_281100,281100,Amortization of Formation Expenses,Fixed Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_281300,281300,"Amortization of Patents, Licenses, Trade Marks",Fixed Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_281900,281900,Amortization of Softwares,Fixed Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_282100,282100,Depreciation of Lands,Fixed Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_282300,282300,Depreciation of Buildings & Constructions,Fixed Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_282400,282400,Depreciation of Machinery and Equipment,Fixed Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_282500,282500,Depreciation of Vehicles & Handling Equipment,Fixed Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_282610,282610,Depreciation of Decor and Improvements,Fixed Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_282621,282621,Depreciation of Office Equipment,Fixed Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_282622,282622,Depreciation of Computer Equipment,Fixed Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_282630,282630,"Depreciation of Furnitures, Fixtures and Accessories",Fixed Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_370000,370000,Inventories - Purchased Finished Goods,Current Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_370050,370050,Inventories - Revaluation,Current Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_397000,397000,Deval. Provision for Purchased Finished Goods,Current Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_401100,401100,Suppliers - Cost of Sales,Payable,l10n_lb.l10n_lb_chart_template,Yes,
+lb_coa_403100,403100,Suppliers - Fixed Assets,Payable,l10n_lb.l10n_lb_chart_template,Yes,
+lb_coa_409000,409000,Advances to Suppliers,Current Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_411100,411100,Customers - Receivables,Receivable,l10n_lb.l10n_lb_chart_template,Yes,
+lb_coa_411500,411500,Doubtful Customers,Receivable,l10n_lb.l10n_lb_chart_template,Yes,
+lb_coa_419000,419000,Advances Received on Sales Orders,Current Liabilities,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_421110,421110,Salaries and Wages due to Personnel,Payable,l10n_lb.l10n_lb_chart_template,Yes,
+lb_coa_421120,421120,Missions due to Personnel,Payable,l10n_lb.l10n_lb_chart_template,Yes,
+lb_coa_428100,428100,Loans to Personnel,Current Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_431000,431000,Social Security Payables,Current Liabilities,l10n_lb.l10n_lb_chart_template,Yes,
+lb_coa_438000,438000,Social Security Receivables,Current Assets,l10n_lb.l10n_lb_chart_template,Yes,
+lb_coa_441100,441100,Taxes and Duties - Salaries,Current Liabilities,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_441110,441110,Taxes and Duties - Non Resident Withholding Tax,Current Liabilities,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_442500,442500,Value Added Tax - Due,Current Liabilities,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_442600,442600,Value Added Tax - Paid On Purchases,Current Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_442610,442610,Value Added Tax - Paid On Expenses,Current Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_442620,442620,Value Added Tax - Paid On Assets,Current Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_442700,442700,Value Added Tax - Collected On Revenues,Current Liabilities,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_442900,442900,Value Added Tax - To be Refunded,Current Liabilities,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_443100,443100,Income Tax on Profits,Current Liabilities,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_451110,451110,Mother Company - Current Accounts,Current Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_451120,451120,Affiliated Companies - Current Accounts,Current Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_451130,451130,Sister Companies - Current Accounts,Current Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_451500,451500,Partners - Current Accounts,Current Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_453000,453000,Dividends Payable,Current Liabilities,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_459200,459200,"Shareholders - Subscribed, Called and Unpaid Capital",Equity,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_461900,461900,Other Operating Creditor Accounts,Payable,l10n_lb.l10n_lb_chart_template,Yes,
+lb_coa_472000,472000,Prepaid Charges,Current Assets,l10n_lb.l10n_lb_chart_template,No,
+lb_coa_474000,474000,Accrued Unpaid Charges,Payable,l10n_lb.l10n_lb_chart_template,Yes,
+lb_coa_491100,491100,Provisions for Customers Bad Debts,Receivable,l10n_lb.l10n_lb_chart_template,Yes,
+lb_coa_512000,512000,Banks,Bank and Cash,l10n_lb.l10n_lb_chart_template,Yes,
+lb_coa_530000,530000,Petty Cash,Bank and Cash,l10n_lb.l10n_lb_chart_template,Yes,
+lb_coa_580000,580000,Bank Transfer,Bank and Cash,l10n_lb.l10n_lb_chart_template,Yes,
+lb_coa_601000,601000,Purchase of Goods - Supplier,Cost of Revenue,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_601810,601810,Purchase of Goods - Freight,Cost of Revenue,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_601830,601830,Purchase of Goods - Insurance,Cost of Revenue,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_601840,601840,Purchase of Goods - Clearance,Cost of Revenue,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_601850,601850,Purchase of Goods - Customs,Cost of Revenue,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_605100,605100,Inventory Variance IN of Finished Goods,Cost of Revenue,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_605200,605200,Inventory Variance OUT of Finished Goods,Cost of Revenue,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_621100,621100,Purchase of Works from Sub-Contractors,Cost of Revenue,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_621200,621200,Purchase of Services,Cost of Revenue,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_625000,625000,"Leasing, Patent Fees & Royalties",Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_investing
+lb_coa_626110,626110,Transportation of promotional material,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626130,626130,Taxis,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626150,626150,Postage,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626151,626151,International telecom,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626152,626152,Local telecom,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626153,626153,GSM ,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626154,626154,Internet access provider,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626210,626210,Maintenance and repairs,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626250,626250,Office cleaning,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626310,626310,Office rental,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626311,626311,Car rental,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626312,626312,Housing rental,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626320,626320,Office and housing rental related charges,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626323,626323,Equipment rental,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626410,626410,Internal meetings and receptions,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626415,626415,Staff entertainment,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626416,626416,Other entertainment,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626420,626420,Plane tickets,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626423,626423,Other travel expenses,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626426,626426,Hotel accomodation,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626430,626430,Personnel Meals Expenses,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626510,626510,Interim Staff Fees,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626530,626530,Professional fees and honorarium,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626531,626531,Legal and tax counsel fees,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
+lb_coa_626532,626532,Auditors fees,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
+lb_coa_626610,626610,Training fees,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626700,626700,Research & Studies Fees,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_investing
+lb_coa_626810,626810,Life insurance,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626910,626910,Health insurance,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626930,626930,Promotional material,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626931,626931,Advertising agencies fees,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626935,626935,Printing fees,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626936,626936,Subscriptions to literature,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626945,626945,Office Supplies,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626950,626950,Electricity,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626951,626951,Fuel and gas,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626955,626955,Parking,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626960,626960,Non capitalized office equipment,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626970,626970,Work and residence permits,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_626971,626971,Formalities,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_631110,631110,Salaries,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_631120,631120,Salaries - expenses deduction,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_631130,631130,Incentives,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_631150,631150,Employee transportation,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_631160,631160,Schooling allowance,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_631170,631170,Taxable benefits,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_631180,631180,Overtime,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_631190,631190,Paid leave,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_635110,635110,Social Security - Family,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_635120,635120,Social Security - Medical,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_635130,635130,Social Security - EOS,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_642000,642000,Municipal Taxes,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_645000,645000,Other taxes,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_645010,645010,Stamps,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_645620,645620,VAT on Purchases,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_645630,645630,VAT on Expenses,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_651110,651110,Depreciation - Establishment expenses,Depreciation,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
+lb_coa_651130,651130,"Depreciation - Patents, Licenses, Trade Marks",Depreciation,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
+lb_coa_651190,651190,Depreciation - Software,Depreciation,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
+lb_coa_651210,651210,Depreciation - Lands,Depreciation,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
+lb_coa_651230,651230,Depreciation - Building & Constructions,Depreciation,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
+lb_coa_651240,651240,Depreciation - Machinery & Equipment,Depreciation,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
+lb_coa_651250,651250,Depreciation - Vehicles & Handling Equipment,Depreciation,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
+lb_coa_651261,651261,Depreciation - Decor & Improvements,Depreciation,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
+lb_coa_651262,651262,Depreciation - Office Equipment,Depreciation,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
+lb_coa_651263,651263,Depreciation - Computers Equipment,Depreciation,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
+lb_coa_651264,651264,Depreciation - Furniture,Depreciation,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
+lb_coa_655000,655000,Provisions Allocations For Charges,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_673620,673620,Bank charges,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
+lb_coa_673630,673630,Bank interests - expense,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
+lb_coa_675000,675000,Realized exchange difference - loss,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
+lb_coa_675010,675010,Unrealized exchange difference - loss,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
+lb_coa_675100,675100,Negative rounding,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
+lb_coa_681100,681100,Net Book Value of Disposed Intangible Assets,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
+lb_coa_681200,681200,Net Book Value of Disposed Tangible Assets,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
+lb_coa_685110,685110,Gifts & Donations,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_685130,685130,Social Security penalties,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_690000,690000,Taxes on Profits,Expenses,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
+lb_coa_701000,701000,Sales of Goods,Income,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_709000,709000,Discount on Sales of Goods,Income,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_713010,713000,Sales of Services,Income,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_719000,719000,Discount on Sales of Services,Income,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_755210,755210,Reversal of Prov. Deferred Charges,Other Income,l10n_lb.l10n_lb_chart_template,No,account.account_tag_operating
+lb_coa_771000,771000,Revenues of Equity Participations,Other Income,l10n_lb.l10n_lb_chart_template,No,account.account_tag_investing
+lb_coa_773000,773000,Bank interests - income,Other Income,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
+lb_coa_775000,775000,Realized exchange difference - gain,Other Income,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
+lb_coa_775010,775010,Unrealized exchange difference - gain,Other Income,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
+lb_coa_775100,775100,Positive rounding,Other Income,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
+lb_coa_781100,781100,Income from Disposal of Intangible Assets,Other Income,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing
+lb_coa_781200,781200,Income from Disposal of Tangible Assets,Other Income,l10n_lb.l10n_lb_chart_template,No,account.account_tag_financing

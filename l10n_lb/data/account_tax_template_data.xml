@@ -3,45 +3,125 @@
         <record model="account.tax.template" id="vat_11_sales">
             <field name="name">VAT on Sales</field>
             <field name="description">VAT 11%</field>
-            <field name="amount" eval="11"/>
+            <field name="amount">11</field>
             <field name="amount_type">percent</field>
             <field name="chart_template_id" ref="l10n_lb_chart_template"/>
-            <field name="refund_account_id" ref="lb_coa_442700"/>
-            <field name="account_id" ref="lb_coa_442700"/>
             <field name="type_tax_use">sale</field>
             <field name="tax_group_id" ref="tax_group_tva_11"/>
+            <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+                (0,0, {
+                    'repartition_type': 'base',
+                    'plus_report_expression_ids': [ref('tax_report_line_standard_rated_supplies_base')],
+                }),
+                (0,0, {
+                    'repartition_type': 'tax',
+                    'account_id': ref('lb_coa_442700'),
+                    'plus_report_expression_ids': [ref('tax_report_line_standard_rated_supplies_vat')],
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+                (0,0, {
+                    'repartition_type': 'base',
+                    'minus_report_expression_ids': [ref('tax_report_line_standard_rated_supplies_base')],
+                }),
+                (0,0, {
+                    'repartition_type': 'tax',
+                    'account_id': ref('lb_coa_442700'),
+                    'minus_report_expression_ids': [ref('tax_report_line_standard_rated_supplies_vat')],
+                }),
+            ]"/>
         </record>
         <record model="account.tax.template" id="vat_11_costofsales">
             <field name="name">VAT on Cost of Sales</field>
             <field name="description">VAT 11%</field>
-            <field name="amount" eval="11"/>
+            <field name="amount">11</field>
             <field name="amount_type">percent</field>
             <field name="chart_template_id" ref="l10n_lb_chart_template"/>
-            <field name="refund_account_id" ref="lb_coa_442600"/>
-            <field name="account_id" ref="lb_coa_442600"/>
             <field name="type_tax_use">purchase</field>
             <field name="tax_group_id" ref="tax_group_tva_11"/>
+            <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+                (0,0, {
+                    'repartition_type': 'base',
+                    'plus_report_expression_ids': [ref('tax_report_line_standard_rated_cogs_base')],
+                }),
+                (0,0, {
+                    'repartition_type': 'tax',
+                    'account_id': ref('lb_coa_442600'),
+                    'plus_report_expression_ids': [ref('tax_report_line_standard_rated_cogs_vat')],
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+                (0,0, {
+                    'repartition_type': 'base',
+                    'minus_report_expression_ids': [ref('tax_report_line_standard_rated_cogs_base')],
+                }),
+                (0,0, {
+                    'repartition_type': 'tax',
+                    'account_id': ref('lb_coa_442600'),
+                    'minus_report_expression_ids': [ref('tax_report_line_standard_rated_cogs_vat')],
+                }),
+            ]"/>
         </record>
         <record model="account.tax.template" id="vat_11_expense">
             <field name="name">VAT on Expenses</field>
             <field name="description">VAT 11%</field>
-            <field name="amount" eval="11"/>
+            <field name="amount">11</field>
             <field name="amount_type">percent</field>
             <field name="chart_template_id" ref="l10n_lb_chart_template"/>
             <field name="type_tax_use">purchase</field>
-            <field name="refund_account_id" ref="lb_coa_442610"/>
-            <field name="account_id" ref="lb_coa_442610"/>
             <field name="tax_group_id" ref="tax_group_tva_11"/>
+            <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+                (0,0, {
+                    'repartition_type': 'base',
+                    'plus_report_expression_ids': [ref('tax_report_line_standard_rated_expense_base')],
+                }),
+                (0,0, {
+                    'repartition_type': 'tax',
+                    'account_id': ref('lb_coa_442610'),
+                    'plus_report_expression_ids': [ref('tax_report_line_standard_rated_expense_vat')],
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+                (0,0, {
+                    'repartition_type': 'base',
+                    'minus_report_expression_ids': [ref('tax_report_line_standard_rated_expense_base')],
+                }),
+                (0,0, {
+                    'repartition_type': 'tax',
+                    'account_id': ref('lb_coa_442610'),
+                    'minus_report_expression_ids': [ref('tax_report_line_standard_rated_expense_vat')],
+                }),
+            ]"/>
         </record>
         <record model="account.tax.template" id="vat_11_assets">
             <field name="name">VAT on Assets</field>
             <field name="description">VAT 11%</field>
-            <field name="amount" eval="11"/>
+            <field name="amount">11</field>
             <field name="amount_type">percent</field>
             <field name="chart_template_id" ref="l10n_lb_chart_template"/>
             <field name="type_tax_use">purchase</field>
-            <field name="refund_account_id" ref="lb_coa_442620"/>
-            <field name="account_id" ref="lb_coa_442620"/>
             <field name="tax_group_id" ref="tax_group_tva_11"/>
+            <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+                (0,0, {
+                    'repartition_type': 'base',
+                    'plus_report_expression_ids': [ref('tax_report_line_standard_rated_asset_base')],
+                }),
+                (0,0, {
+                    'repartition_type': 'tax',
+                    'account_id': ref('lb_coa_442620'),
+                    'plus_report_expression_ids': [ref('tax_report_line_standard_rated_asset_vat')],
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+                (0,0, {
+                    'repartition_type': 'base',
+                    'minus_report_expression_ids': [ref('tax_report_line_standard_rated_asset_base')],
+                }),
+                (0,0, {
+                    'repartition_type': 'tax',
+                    'account_id': ref('lb_coa_442620'),
+                    'minus_report_expression_ids': [ref('tax_report_line_standard_rated_asset_vat')],
+                }),
+            ]"/>
         </record>
 </odoo>
