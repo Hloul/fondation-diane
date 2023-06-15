@@ -35,7 +35,7 @@ class StatusProcess(models.Model):
 
 class ProjectPhase(models.Model):
     _name='project.phase'
-    _description = "Project Status"
+    _description = "Project Phase"
     _order = 'sequence, id'
     
     name = fields.Char(string='Phase', required=True, translate=True)
@@ -53,7 +53,7 @@ class ProjectCategory(models.Model):
 
 class ProjectProcess(models.Model):
     _name='project.process'
-    _description = "Project Phase"
+    _description = "Project Process"
     name = fields.Char(string='Process', required=True, translate=True)
     description = fields.Text(translate=True)
     sequence = fields.Integer(default=1)
