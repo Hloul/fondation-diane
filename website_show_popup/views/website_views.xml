@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="website_popup_tree" model="ir.ui.view">
+            <field name="name">website_popup_tree</field>
+            <field name="model">website.page</field>
+            <field name="inherit_id" ref="website.website_pages_tree_view"/>
+            <field name="arch" type="xml">
+                <field name="is_published" position="after">
+                    <field name="show_popup"/>
+                    <field name="popup_title" attrs="{'invisible': [('show_popup', '=', False)]}"/>
+                    <field name="popup" attrs="{'invisible': [('show_popup', '=', False)]}"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="website_pages_prop_form_view_popup" model="ir.ui.view">
+            <field name="name">website.prop.page.form</field>
+            <field name="model">website.page</field>
+            <field name="inherit_id" ref="website.website_page_properties_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='url']" position="after">
+                    <field name="show_popup"/>
+                    <field name="popup_title" attrs="{'invisible': [('show_popup', '=', False)]}"/>
+                    <field name="popup" attrs="{'invisible': [('show_popup', '=', False)]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
