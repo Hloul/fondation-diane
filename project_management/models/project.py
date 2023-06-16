@@ -10,12 +10,11 @@ class ProjectManagement(models.Model):
     category_id =fields.Many2one('project.category', string='Category')
     status_id=fields.Many2one('project.status', string='Status')
     tag_ids=fields.Many2many('project.tags', string='Tag')
-    leadmanager_id=fields.Many2one('res.partner',string='Lead Manager',track_visibility="onchange")
-    Analyst_id=fields.Many2one('res.partner',string='Analyst',track_visibility="onchange")
-    start_date=fields.Date(string='Start Date')
+    leadmanager_id=fields.Many2one('res.partner',string='Lead Manager')
+    Analyst_id=fields.Many2one('res.partner',string='Analyst')
+    start_date=fields.Date(string='Starting Date')
     golive_date=fields.Date(string='Go Live Date')
 
-    @api.multi
     def write(self, vals):
         res = super(ProjectManagement, self).write(vals) if vals else True
         if  vals.get('privacy_visibilty') or vals.get('leadmanager_id'):
@@ -36,7 +35,7 @@ class StatusProcess(models.Model):
 
 class ProjectPhase(models.Model):
     _name='project.phase'
-    _description = "Project Status"
+    _description = "Project Phase"
     _order = 'sequence, id'
     
     name = fields.Char(string='Phase', required=True, translate=True)
@@ -54,7 +53,7 @@ class ProjectCategory(models.Model):
 
 class ProjectProcess(models.Model):
     _name='project.process'
-    _description = "Project Phase"
+    _description = "Project Process"
     name = fields.Char(string='Process', required=True, translate=True)
     description = fields.Text(translate=True)
     sequence = fields.Integer(default=1)
