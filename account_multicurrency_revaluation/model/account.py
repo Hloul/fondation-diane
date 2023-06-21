@@ -50,7 +50,6 @@ class AccountAccount(models.Model):
             self.env.ref("account.data_account_type_liquidity").id,
         ]
 
-    @api.multi
     @api.onchange('user_type_id')
     def _onchange_user_type_id(self):
         revaluation_accounts = self._get_revaluation_account_types()
@@ -58,7 +57,6 @@ class AccountAccount(models.Model):
             if rec.user_type_id.id in revaluation_accounts:
                 rec.currency_revaluation = True
 
-    @api.multi
     def _revaluation_query(self, revaluation_date):
 
         tables, where_clause, where_clause_params = \
@@ -97,7 +95,6 @@ class AccountAccount(models.Model):
         params += where_clause_params
         return query, params
 
-    @api.multi
     def compute_revaluations(self, revaluation_date):
         accounts = {}
         # compute for each account the balance/debit/credit from the move lines
