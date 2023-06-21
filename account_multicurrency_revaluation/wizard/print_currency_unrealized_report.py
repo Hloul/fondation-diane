@@ -24,7 +24,6 @@ class UnrealizedCurrencyReportPrinter(models.TransientModel):
         ]).ids
         return [(6, 0, account_ids)]
 
-    @api.multi
     def print_report(self, data):
         """
         Show the report

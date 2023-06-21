@@ -112,7 +112,6 @@ class WizardCurrencyRevaluation(models.TransientModel):
         created_move.post()
         return [x.id for x in created_move.line_ids]
 
-    @api.multi
     def _compute_unrealized_currency_gl(self, currency_id, balances):
         """
         Update data dict with the unrealized currency gain and loss
@@ -170,7 +169,6 @@ class WizardCurrencyRevaluation(models.TransientModel):
                 'rate': rate}
         return text % data
 
-    @api.multi
     def _write_adjust_balance(self, account_id, currency_id,
                               partner_id, amount, label, form, sums):
         """
@@ -264,7 +262,6 @@ class WizardCurrencyRevaluation(models.TransientModel):
                 not (company.provision_bs_gain_account_id and
                      company.provision_pl_gain_account_id))
 
-    @api.multi
     def revaluate_currency(self):
         """
         Compute unrealized currency gain and loss and add entries to
