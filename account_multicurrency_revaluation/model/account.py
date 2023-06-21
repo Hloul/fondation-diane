@@ -3,7 +3,7 @@
 
 from odoo import models, fields, api
 
-
+"""
 class AccountAccountLine(models.Model):
     _inherit = 'account.move.line'
     # By convention added columns stats with gl_.
@@ -122,3 +122,4 @@ class AccountAccount(models.Model):
             accounts[account_id][partner_id][currency_id] = line
 
         return accounts
+"""

@@ -3,7 +3,7 @@
 
 from odoo import models, fields
 
-
+"""
 class AccountConfigSettings(models.TransientModel):
     _inherit = 'res.config.settings'
 
@@ -76,3 +76,4 @@ class AccountConfigSettings(models.TransientModel):
              "as \"To Be Reversed\".",
         default=True,
     )
+"""
