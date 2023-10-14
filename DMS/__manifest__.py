@@ -9,6 +9,7 @@
     """,
 
     'author': "BAS",
+    'license': 'AGPL-3',
     'category': 'Extra Tools',
     'version': '1.0',
 

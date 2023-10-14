@@ -8,7 +8,10 @@ import requests
 from werkzeug import urls
 
 from odoo import api, fields, models
-from odoo.addons.payment.models.payment_acquirer import ValidationError
+
+from odoo.addons.payment import utils as payment_utils
+from odoo.exceptions import ValidationError
+
 from odoo.tools.float_utils import float_compare
 
 
@@ -16,9 +19,9 @@ _logger = logging.getLogger(__name__)
 
 
 class AcquirerAreeba(models.Model):
-    _inherit = 'payment.acquirer'
+    _inherit = 'payment.provider'
 
-    provider = fields.Selection(selection_add=[('areeba', 'Areeba')])
+    provider = fields.Selection(selection=[('areeba', 'Areeba')])
     areeba_merchant_id = fields.Char('Areeba Merchant id', required_if_provider='areeba', groups='base.group_user')
     areeba_api_password = fields.Char('Areeba Api Password', required_if_provider='areeba', groups='base.group_user')
     areeba_payment_logo = fields.Binary(groups='base.group_user')
@@ -34,7 +37,7 @@ class AcquirerAreeba(models.Model):
         resp.raise_for_status()
         return resp.json()
 
-    @api.multi
+    
     def areeba_form_generate_values(self, values):
         base_url = self.get_base_url()
         areeba_tx_values = dict(values)
@@ -90,7 +93,7 @@ class TxAreeba(models.Model):
                     error_msg += '; multiple order found'
                 _logger.info(error_msg)
                 raise ValidationError(error_msg)
-            acquirer = txs.acquirer_id
+            acquirer = txs.provider_id
             url = 'https://ap-gateway.mastercard.com/api/rest/version/60/merchant/%s/order/%s' % (acquirer.areeba_merchant_id, data)
             data = acquirer._areeba_request(url, method="GET")
             _logger.info(
@@ -104,7 +107,6 @@ class TxAreeba(models.Model):
     def _areeba_form_get_tx_from_data(self, data):
         return data['payment_transaction']
 
-    @api.multi
     def _areeba_form_get_invalid_parameters(self, data):
         invalid_parameters = []
 
@@ -117,7 +119,6 @@ class TxAreeba(models.Model):
 
         return invalid_parameters
 
-    @api.multi
     def _areeba_form_validate(self, data):
         status = data.get('result')
         former_tx_state = self.state

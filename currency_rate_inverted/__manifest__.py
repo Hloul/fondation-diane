@@ -13,11 +13,11 @@
     'author': 'Eficent,Odoo Community Association (OCA)',
     'website': 'https://github.com/OCA/currency',
     'license': 'AGPL-3',
-    'depends': [
-        'base'
-    ],
-    'data': [
-        'views/res_currency_view.xml'
-    ],
-    "installable": True
+#    'depends': [
+#        'base'
+#    ],
+#    'data': [
+#        'views/res_currency_view.xml'
+#    ],
+#    "installable": True
 }

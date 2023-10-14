@@ -7,6 +7,7 @@
     'description': """
     New
     """,
+    'license': 'AGPL-3',
     'data':[
         'views/category.xml',
         'views/phase.xml',

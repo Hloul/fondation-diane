@@ -5,55 +5,28 @@
             <field name="model">project.project</field>
             <field name="inherit_id" ref="project.edit_project"/>
             <field name="arch" type="xml">        
-                  <xpath expr="//page[@name='settings']" position="replace">
-
-                        <page name="settings" string="Settings">
-                            <group name="attrs">
+            <xpath expr="//group[@name='group_documents_analytics']" position="after">
                             <group string="Contacts">
-                                <field name="user_id" string="Project Manager"
-                                        attrs="{'readonly':[('active','=',False)]}"/>
+                                <field name="user_id" string="Project Manager" attrs="{'readonly':[('active','=',False)]}"/>
                                 <field name="partner_id" string="Customer"/>
                                 <field name="leadmanager_id" string="Lead Manager"/>
                                 <field name="Analyst_id" string="Analyst"/>
-                                <field name="privacy_visibility" widget="radio"/>
-                                </group>
-                                <group string="Status">
-                                    <field name="status_id" string="Status"/>
-                                    <field name="phase_id" string="Phase"/>
-                                    <field name="process_id" string="Process"/>
-                                    <field name="category_id" string="Category"/>
-                                    <field name="tag_ids" widget="many2many_tags" string="Tags"/>
-                                </group>
-                                <group string="Dates">
+                            </group>
+                            <group string="Status">
+                                <field name="status_id" string="Status"/>
+                                <field name="phase_id" string="Phase"/>
+                                <field name="process_id" string="Process"/>
+                                <field name="category_id" string="Category"/>
+                                <field name="tag_ids" widget="many2many_tags" string="Tags"/>
+                            </group>
+                            <group string="Dates">
                                 <field name="start_date"/>
                                 <field name="golive_date"/>
-                                
-                                </group>
-                                <label for="rating_status" groups="project.group_project_rating"/>
-                                <div groups="project.group_project_rating">
-                                    <field name="rating_status" widget="radio"/>
-                                    <p attrs="{'invisible': [('rating_status','not in',('periodic','stage'))]}" class="text-muted oe_edit_only">
-                                        Edit project's stages and set an email template on the stages on which you want to activate the rating.
-                                    </p>
-                                </div>
-                                <field name="rating_status_period"  class="oe_inline" attrs="{'required': [('rating_status','=','periodic')], 'invisible': [('rating_status','!=','periodic')]}" groups="project.group_project_rating"/>
-                                <field name="portal_show_rating" attrs="{'invisible': [('rating_status','==','no')]}" groups="project.group_project_rating"/>
-                                <field name="subtask_project_id" groups="project.group_subtask_project"/>
                             </group>
-                            <group name="misc">
-                                <group string="Configuration" groups="base.group_no_one" name="configuration">
-                                    <field name="sequence" groups="base.group_no_one"/>
-                                    <field name="company_id" groups="base.group_multi_company"/>
-                                </group>
-                                <group string="Time Scheduling" groups="base.group_no_one">
-                                    <field name="resource_calendar_id" groups="base.group_no_one"/>
-                                </group>
-                            </group>
-                        </page>
-                  </xpath>
+            </xpath>
             </field>
 </record>
- <record id="view_project_project_filter" model="ir.ui.view">
+<record id="view_project_project_filter" model="ir.ui.view">
         <field name="name">project.project.select</field>
         <field name="model">project.project</field>
         <field name="inherit_id" ref="project.view_project_project_filter"/>   

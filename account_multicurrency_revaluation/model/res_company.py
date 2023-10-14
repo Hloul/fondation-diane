@@ -3,7 +3,7 @@
 
 from odoo import models, fields
 
-
+"""
 class ResCompany(models.Model):
     _inherit = "res.company"
 
@@ -56,3 +56,4 @@ class ResCompany(models.Model):
              "as \"To Be Reversed\".",
         default=True,
     )
+"""

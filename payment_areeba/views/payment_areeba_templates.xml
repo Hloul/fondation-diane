@@ -20,11 +20,12 @@
                 </script>
             </div>
         </template>
-
+<!--
         <template id="assets_frontend" inherit_id="web.assets_frontend" name="Payment AreebaAssets">
             <xpath expr="." position="inside">
                 <script type="text/javascript" src="/payment_areeba/static/src/js/payment_form.js"></script>
             </xpath>
         </template>
+-->
     </data>
 </odoo>

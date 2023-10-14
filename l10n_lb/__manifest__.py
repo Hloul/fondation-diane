@@ -5,24 +5,25 @@
 
 {
     'name': "Lebanon - Accounting",
-    'version': '12.0',
-    'author': 'HLOUL-BAS',
-    'website': 'http://www.hloul-bas.com',
+    'version': '16.0',
+    'author': 'BAS',
+    'website': 'http://www.bas.sarl',
     'category': 'Localization',
     'license': 'AGPL-3',	
     'description': """
 Lebanon - Accounting localization: 
 chart of accounts, tax and stock valuation
-by HLOUL-BAS
+by BAS
 ==========================================
     """,
 
     'depends': ['account'],
 
     'data': [
-        'data/account_data.xml',
+        'data/l10n_lb_data.xml',
         'data/l10n_lb_chart_data.xml',
         'data/account.account.template.csv',
+        'data/account_tax_group_data.xml',
         'data/l10n_lb_chart_post_data.xml',
         'data/account_tax_template_data.xml',
         'data/account_chart_template_data.xml',
