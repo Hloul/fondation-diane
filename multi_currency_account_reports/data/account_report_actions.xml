@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_account_report_general_ledger_multi_currency" model="ir.actions.client">
+            <field name="name">Multi Currency General Ledger</field>
+            <field name="tag">account_report</field>
+            <field name="context" eval="{'report_id': ref('multi_currency_account_reports.general_ledger_multi_currency_report')}"/>
+        </record>
+        <record id="action_account_report_partner_ledger_multi_currency" model="ir.actions.client">
+            <field name="name">Multi Currency Partner Ledger</field>
+            <field name="tag">account_report</field>
+            <field name="context" eval="{'report_id': ref('multi_currency_account_reports.partner_ledger_multi_currency_report')}"/>
+        </record>
+
+    </data>
+</odoo>
