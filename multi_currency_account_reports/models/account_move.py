@@ -59,6 +59,6 @@ class AccountMoveLine(models.Model):
             rec.compute_rate = conversion_rate
           else:
             conversion_rate = rec.conversion_rate
-            rec.debit2 = rec.debit * conversion_rate
-            rec.credit2 = rec.credit * conversion_rate
+            rec.debit2 = rec.debit / conversion_rate
+            rec.credit2 = rec.credit / conversion_rate
             rec.compute_rate = conversion_rate
