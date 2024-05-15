@@ -17,7 +17,7 @@ class AccountMoveLine(models.Model):
     @api.depends('debit', 'credit', 'company_currency_id2', 'currency_id')
     def _compute_conversion_rate(self):
         for rec in self:
-          _logger.debug('MC: b4 conversion_rate %s', rec.conversion_rate)
+          _logger.info('MC: b4 conversion_rate %s', rec.conversion_rate)
           if rec.conversion_rate == 0:
             rec.debit2 = 0
             rec.credit2 = 0
@@ -29,8 +29,8 @@ class AccountMoveLine(models.Model):
                 if from_currency.id == to_currency.id:
                     conversion_rate = rec.debit / abs(rec.amount_currency)
                     rec.debit2 = abs(rec.amount_currency)
-                    _logger.debug('MC: from==to debit2 %s', rec.debit2)
-                    _logger.debug('MC: from==to conversion_rate %s', conversion_rate)
+                    _logger.info('MC: from==to debit2 %s', rec.debit2)
+                    _logger.info('MC: from==to conversion_rate %s', conversion_rate)
                 else:
                     if rec.move_id.asset_id:
                         conversion_rate = self.env['res.currency']._get_conversion_rate(
@@ -42,8 +42,8 @@ class AccountMoveLine(models.Model):
                             to_currency, main_currency, self.env.company, rec.move_id.invoice_date or rec.move_id.date
                         )
                         rec.debit2 = rec.debit / conversion_rate
-                        _logger.debug('MC: from<>to debit2 %s', rec.debit2)
-                        _logger.debug('MC: from<>to conversion_rate %s', conversion_rate)
+                        _logger.info('MC: from<>to debit2 %s', rec.debit2)
+                        _logger.info('MC: from<>to conversion_rate %s', conversion_rate)
                 rec.conversion_rate = conversion_rate
             if rec.credit and rec.company_currency_id2 and rec.currency_id and (rec.move_id.invoice_date or rec.move_id.date):
                 main_currency = self.env.company.currency_id
@@ -52,8 +52,8 @@ class AccountMoveLine(models.Model):
                 if from_currency.id == to_currency.id:
                     conversion_rate = rec.credit / abs(rec.amount_currency)
                     rec.credit2 = abs(rec.amount_currency)
-                    _logger.debug('MC: from==to credit2 %s', rec.credit2)
-                    _logger.debug('MC: from==to conversion_rate %s', conversion_rate)
+                    _logger.info('MC: from==to credit2 %s', rec.credit2)
+                    _logger.info('MC: from==to conversion_rate %s', conversion_rate)
                 else:
                     if rec.move_id.asset_id:
                         conversion_rate = self.env['res.currency']._get_conversion_rate(
@@ -65,16 +65,16 @@ class AccountMoveLine(models.Model):
                             to_currency, main_currency, self.env.company, rec.move_id.invoice_date or rec.move_id.date
                         )
                         rec.credit2 = rec.credit / conversion_rate
-                        _logger.debug('MC: from<>to credit2 %s', rec.credit2)
-                        _logger.debug('MC: from==to conversion_rate %s', conversion_rate)
+                        _logger.info('MC: from<>to credit2 %s', rec.credit2)
+                        _logger.info('MC: from==to conversion_rate %s', conversion_rate)
                 rec.conversion_rate = conversion_rate
             rec.compute_rate = conversion_rate
-            _logger.debug('MC: end new calc rec.conversion_rate %s', rec.conversion_rate)
+            _logger.info('MC: end new calc rec.conversion_rate %s', rec.conversion_rate)
           else:
             conversion_rate = rec.conversion_rate
             rec.debit2 = rec.debit / conversion_rate
             rec.credit2 = rec.credit / conversion_rate
             rec.compute_rate = conversion_rate
-            _logger.debug('MC: no calc conversion_rate %s', conversion_rate)
-            _logger.debug('MC: no calc debit2 %s', rec.debit2)
-            _logger.debug('MC: no calc credit2 %s', rec.credit2)
+            _logger.info('MC: no calc conversion_rate %s', conversion_rate)
+            _logger.info('MC: no calc debit2 %s', rec.debit2)
+            _logger.info('MC: no calc credit2 %s', rec.credit2)
