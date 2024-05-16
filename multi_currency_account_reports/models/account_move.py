@@ -7,12 +7,12 @@ class AccountMoveLine(models.Model):
 
     company_currency_id2 = fields.Many2one(string='Second Company Currency', related='company_id.currency_id2',
                                           readonly=True)
-    compute_rate = fields.Float(string='Conversion Rate', compute='_compute_conversion_rate')
+    computed_rate = fields.Float(string='Computed Rate', compute='_compute_conversion_rate', inverse='_inverse_conversion_rate')
     conversion_rate = fields.Float(string='Conversion Rate', default=0, store=True)
     debit2 = fields.Monetary(string='Debit2', currency_field='company_currency_id2', default=0)
     credit2 = fields.Monetary(string='Credit2', currency_field='company_currency_id2', default=0)
 
-    @api.depends('amount_currency','date')
+    @api.depends('amount_currency','date','currency_id','debit','credit')
     def _compute_conversion_rate(self):
         for rec in self:
           _logger.info('MC: b4 conversion_rate %s', rec.conversion_rate)
@@ -66,13 +66,24 @@ class AccountMoveLine(models.Model):
                         _logger.info('MC: from<>to credit2 %s', rec.credit2)
                         _logger.info('MC: from==to conversion_rate %s', conversion_rate)
                 rec.conversion_rate = conversion_rate
-            rec.compute_rate = conversion_rate
+            rec.computed_rate = conversion_rate
             _logger.info('MC: end new calc rec.conversion_rate %s', rec.conversion_rate)
           else:
             conversion_rate = rec.conversion_rate
             rec.debit2 = rec.debit / conversion_rate
             rec.credit2 = rec.credit / conversion_rate
-            rec.compute_rate = conversion_rate
+            rec.computed_rate = conversion_rate
             _logger.info('MC: no calc conversion_rate %s', conversion_rate)
             _logger.info('MC: no calc debit2 %s', rec.debit2)
             _logger.info('MC: no calc credit2 %s', rec.credit2)
+
+    def _inverse_conversion_rate(self):
+        for rec in self:
+          conversion_rate = rec.computed_rate
+          rec.debit2 = rec.debit / conversion_rate
+          rec.credit2 = rec.credit / conversion_rate
+          _logger.info('MC inverse: conversion_rate %s', conversion_rate)
+          _logger.info('MC inverse: debit2 %s', rec.debit2)
+          _logger.info('MC inverse: credit2 %s', rec.credit2)
+          
+
