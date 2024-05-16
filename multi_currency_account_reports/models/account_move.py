@@ -12,7 +12,7 @@ class AccountMoveLine(models.Model):
     debit2 = fields.Monetary(string='Debit2', currency_field='company_currency_id2', default=0)
     credit2 = fields.Monetary(string='Credit2', currency_field='company_currency_id2', default=0)
 
-    @api.depends('debit', 'credit', 'company_currency_id2', 'currency_id')
+    @api.depends('amount_currency','date')
     def _compute_conversion_rate(self):
         for rec in self:
           _logger.info('MC: b4 conversion_rate %s', rec.conversion_rate)
