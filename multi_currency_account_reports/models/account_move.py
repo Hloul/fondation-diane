@@ -82,7 +82,7 @@ class AccountMoveLine(models.Model):
           conversion_rate = rec.computed_rate
           rec.debit2 = rec.debit / conversion_rate
           rec.credit2 = rec.credit / conversion_rate
-          _logger.info('MC inverse: conversion_rate %s', computed_rate)
+          _logger.info('MC inverse: conversion_rate %s', conversion_rate)
           _logger.info('MC inverse: debit2 %s', rec.debit2)
           _logger.info('MC inverse: credit2 %s', rec.credit2)
           
