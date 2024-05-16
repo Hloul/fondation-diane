@@ -16,7 +16,7 @@ class AccountMoveLine(models.Model):
     def _compute_conversion_rate(self):
         for rec in self:
           #_logger.info('MC: b4 computed_rate %s', rec.computed_rate)
-          if rec.computed_rate is null:
+          if rec.computed_rate == False:
             rec.debit2 = 0
             rec.credit2 = 0
             #rec.conversion_rate = 1
