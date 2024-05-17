@@ -15,8 +15,8 @@ class AccountMoveLine(models.Model):
     @api.depends('amount_currency','date','currency_id','debit','credit')
     def _compute_conversion_rate(self):
         for rec in self:
-          _logger.info('MC: START computed_rate %s', rec.computed_rate)
-          _logger.info('MC: START self.id %s', rec)
+            _logger.info('MC: START computed_rate %s', rec.computed_rate)
+            _logger.info('MC: START self.id %s', rec)
           #if rec.computed_rate == False:
             rec.debit2 = 0
             rec.credit2 = 0
