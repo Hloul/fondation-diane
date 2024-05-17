@@ -15,7 +15,7 @@ class AccountMoveLine(models.Model):
     @api.depends('amount_currency','date','currency_id','debit','credit')
     def _compute_conversion_rate(self):
         for rec in self:
-          #_logger.info('MC: b4 computed_rate %s', rec.computed_rate)
+          _logger.info('MC: START computed_rate %s', rec.computed_rate)
           if rec.computed_rate == False:
             rec.debit2 = 0
             rec.credit2 = 0
@@ -35,6 +35,7 @@ class AccountMoveLine(models.Model):
                             to_currency, main_currency, self.env.company, rec.move_id.asset_id.acquisition_date
                         )
                         rec.debit2 = rec.debit / conversion_rate
+                        _logger.info('MC: asset conversion_rate %s', conversion_rate)
                     else:
                         conversion_rate = self.env['res.currency']._get_conversion_rate(
                             to_currency, main_currency, self.env.company, rec.move_id.invoice_date or rec.move_id.date
@@ -58,16 +59,17 @@ class AccountMoveLine(models.Model):
                             to_currency, main_currency, self.env.company, rec.move_id.asset_id.acquisition_date
                         )
                         rec.credit2 = rec.credit / conversion_rate
+                        _logger.info('MC: asset conversion_rate %s', conversion_rate)
                     else:
                         conversion_rate = self.env['res.currency']._get_conversion_rate(
                             to_currency, main_currency, self.env.company, rec.move_id.invoice_date or rec.move_id.date
                         )
                         rec.credit2 = rec.credit / conversion_rate
                         _logger.info('MC: from<>to credit2 %s', rec.credit2)
-                        _logger.info('MC: from==to conversion_rate %s', conversion_rate)
+                        _logger.info('MC: from<>to conversion_rate %s', conversion_rate)
                 #rec.conversion_rate = conversion_rate
             rec.computed_rate = conversion_rate
-            _logger.info('MC: end new calc rec.computed_rate %s', rec.computed_rate)
+            _logger.info('MC: END computed_rate %s', rec.computed_rate)
           #else:
             #conversion_rate = rec.conversion_rate
             #rec.debit2 = rec.debit / conversion_rate
