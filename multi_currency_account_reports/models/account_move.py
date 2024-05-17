@@ -21,7 +21,7 @@ class AccountMoveLine(models.Model):
             rec.debit2 = 0
             rec.credit2 = 0
             #rec.conversion_rate = 1
-            if rec.debit and rec.company_currency_id2 and rec.currency_id and (rec.move_id.invoice_date or rec.move_id.date):
+            if rec.debit and rec.company_currency_id2 and rec.currency_id and rec.amount_currency and (rec.move_id.invoice_date or rec.move_id.date):
                 main_currency = self.env.company.currency_id
                 from_currency = rec.currency_id
                 to_currency = self.env.company.currency_id2
@@ -46,7 +46,7 @@ class AccountMoveLine(models.Model):
                         _logger.info('MC: from<>to conversion_rate %s', conversion_rate)
                 #rec.conversion_rate = conversion_rate
                 rec.computed_rate = conversion_rate
-            if rec.credit and rec.company_currency_id2 and rec.currency_id and (rec.move_id.invoice_date or rec.move_id.date):
+            if rec.credit and rec.company_currency_id2 and rec.currency_id and rec.amount_currency and (rec.move_id.invoice_date or rec.move_id.date):
                 main_currency = self.env.company.currency_id
                 from_currency = rec.currency_id
                 to_currency = self.env.company.currency_id2
