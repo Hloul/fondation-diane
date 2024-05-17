@@ -98,8 +98,8 @@ class AccountMoveLine(models.Model):
          if self.conversion_rate:
            self.debit2 = self.debit / self.conversion_rate
            self.credit2 = self.credit / self.conversion_rate
-          _logger.info('CONV: onchange debit2 %s', rec.debit2)
-          _logger.info('CONV: onchange: credit2 %s', rec.credit2)
+           _logger.info('CONV: onchange debit2 %s', rec.debit2)
+           _logger.info('CONV: onchange: credit2 %s', rec.credit2)
 
           
 
