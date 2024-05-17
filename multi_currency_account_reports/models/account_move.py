@@ -97,7 +97,7 @@ class AccountMoveLine(models.Model):
     def _onchange_conversion_rate(self):
          if self.conversion_rate:
            self.debit2 = self.debit / self.conversion_rate
-           self.credit2 = self.credit / self.conversion
+           self.credit2 = self.credit / self.conversion_rate
 
           
 
