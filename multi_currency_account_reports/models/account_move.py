@@ -16,6 +16,7 @@ class AccountMoveLine(models.Model):
     def _compute_conversion_rate(self):
         for rec in self:
           _logger.info('MC: START computed_rate %s', rec.computed_rate)
+          _logger.info('MC: START self.id %s', rec)
           if rec.computed_rate == False:
             rec.debit2 = 0
             rec.credit2 = 0
@@ -44,6 +45,7 @@ class AccountMoveLine(models.Model):
                         _logger.info('MC: from<>to debit2 %s', rec.debit2)
                         _logger.info('MC: from<>to conversion_rate %s', conversion_rate)
                 #rec.conversion_rate = conversion_rate
+                rec.computed_rate = conversion_rate
             if rec.credit and rec.company_currency_id2 and rec.currency_id and (rec.move_id.invoice_date or rec.move_id.date):
                 main_currency = self.env.company.currency_id
                 from_currency = rec.currency_id
@@ -68,7 +70,7 @@ class AccountMoveLine(models.Model):
                         _logger.info('MC: from<>to credit2 %s', rec.credit2)
                         _logger.info('MC: from<>to conversion_rate %s', conversion_rate)
                 #rec.conversion_rate = conversion_rate
-            rec.computed_rate = conversion_rate
+                rec.computed_rate = conversion_rate
             _logger.info('MC: END computed_rate %s', rec.computed_rate)
           #else:
             #conversion_rate = rec.conversion_rate
