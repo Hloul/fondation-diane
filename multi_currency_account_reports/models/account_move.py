@@ -7,7 +7,7 @@ class AccountMoveLine(models.Model):
 
     company_currency_id2 = fields.Many2one(string='Second Company Currency', related='company_id.currency_id2',
                                           readonly=True)
-    computed_rate = fields.Float(string='Computed Rate', compute='_compute_conversion_rate', inverse='_inverse_conversion_rate')
+    computed_rate = fields.Float(string='Computed Rate', compute='_compute_conversion_rate', inverse='_inverse_conversion_rate', store=True)
     conversion_rate = fields.Float(string='Conversion Rate', default=0, store=True)
     debit2 = fields.Monetary(string='Debit2', currency_field='company_currency_id2', default=0)
     credit2 = fields.Monetary(string='Credit2', currency_field='company_currency_id2', default=0)
@@ -17,7 +17,7 @@ class AccountMoveLine(models.Model):
         for rec in self:
           _logger.info('MC: START computed_rate %s', rec.computed_rate)
           _logger.info('MC: START self.id %s', rec)
-          if rec.computed_rate == False:
+          #if rec.computed_rate == False:
             rec.debit2 = 0
             rec.credit2 = 0
             #rec.conversion_rate = 1
