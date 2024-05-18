@@ -7,7 +7,7 @@ class AccountMoveLine(models.Model):
 
     company_currency_id2 = fields.Many2one(string='Second Company Currency', related='company_id.currency_id2',readonly=True)
     conversion_rate = fields.Float(string='Conversion Rate', compute='_compute_conversion_rate', inverse='_inverse_conversion_rate')
-    manual_rate = fields.Boolean(string='Manual Rate', default=False)
+    custom_rate = fields.Float(string='Custom Rate', default=0)
     debit2 = fields.Monetary(string='Debit2', currency_field='company_currency_id2', default=0)
     credit2 = fields.Monetary(string='Credit2', currency_field='company_currency_id2', default=0)
 
@@ -16,9 +16,7 @@ class AccountMoveLine(models.Model):
         for rec in self:
           _logger.info('MC: START conversion_rate %s', rec.conversion_rate)
           _logger.info('MC: START self.id %s', rec)
-          if rec.manual_rate == False:
-            rec.debit2 = 0
-            rec.credit2 = 0
+          if rec.custom_rate == 0:
             conversion_rate = 1
             if rec.debit and rec.company_currency_id2 and rec.currency_id and rec.amount_currency and (rec.move_id.invoice_date or rec.move_id.date):
                 main_currency = self.env.company.currency_id
@@ -69,25 +67,17 @@ class AccountMoveLine(models.Model):
                         _logger.info('MC: from<>to conversion_rate %s', conversion_rate)
                 rec.conversion_rate = conversion_rate
             _logger.info('MC: END computed_rate %s', rec.conversion_rate)
-          #else:
-            #conversion_rate = rec.conversion_rate
-            #rec.debit2 = rec.debit / conversion_rate
-            #rec.credit2 = rec.credit / conversion_rate
-            #rec.computed_rate = conversion_rate
-            #_logger.info('MC: no calc conversion_rate %s', conversion_rate)
-            #_logger.info('MC: no calc debit2 %s', rec.debit2)
-            #_logger.info('MC: no calc credit2 %s', rec.credit2)
 
     def _inverse_conversion_rate(self):
         for rec in self:
           if rec.conversion_rate:
-            rec.manual_rate = True
-            conversion_rate = rec.conversion_rate
-            rec.debit2 = rec.debit / conversion_rate
-            rec.credit2 = rec.credit / conversion_rate
+            rec.debit2 = rec.debit / rec.conversion_rate
+            rec.credit2 = rec.credit / rec.conversion_rate
             _logger.info('MC inverse: conversion_rate %s', conversion_rate)
             _logger.info('MC inverse: debit2 %s', rec.debit2)
             _logger.info('MC inverse: credit2 %s', rec.credit2)
+          rec.custom_rate = rec.conversion_rate
+          
 
           
 
