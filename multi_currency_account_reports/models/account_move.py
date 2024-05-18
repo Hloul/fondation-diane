@@ -14,8 +14,9 @@ class AccountMoveLine(models.Model):
     @api.depends('amount_currency','date','currency_id','debit','credit')
     def _compute_conversion_rate(self):
         for rec in self:
-          _logger.info('MC: START conversion_rate %s', rec.conversion_rate)
           _logger.info('MC: START self.id %s', rec)
+          _logger.info('MC: START conversion_rate %s', rec.conversion_rate)
+          _logger.info('MC: START custom_rate %s', rec.custom_rate)
           if rec.custom_rate == 0:
             conversion_rate = 1
             if rec.debit and rec.company_currency_id2 and rec.currency_id and rec.amount_currency and (rec.move_id.invoice_date or rec.move_id.date):
@@ -66,14 +67,16 @@ class AccountMoveLine(models.Model):
                         _logger.info('MC: from<>to credit2 %s', rec.credit2)
                         _logger.info('MC: from<>to conversion_rate %s', conversion_rate)
                 rec.conversion_rate = conversion_rate
-            _logger.info('MC: END computed_rate %s', rec.conversion_rate)
+          else:
+            rec.conversion_rate = rec.custom_rate            
+          _logger.info('MC: END conversion_rate %s', rec.conversion_rate)
 
     def _inverse_conversion_rate(self):
         for rec in self:
           if rec.conversion_rate:
             rec.debit2 = rec.debit / rec.conversion_rate
             rec.credit2 = rec.credit / rec.conversion_rate
-            _logger.info('MC inverse: conversion_rate %s', conversion_rate)
+            _logger.info('MC inverse: conversion_rate %s', rec.conversion_rate)
             _logger.info('MC inverse: debit2 %s', rec.debit2)
             _logger.info('MC inverse: credit2 %s', rec.credit2)
           rec.custom_rate = rec.conversion_rate
