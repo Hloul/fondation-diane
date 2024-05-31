@@ -30,7 +30,7 @@ class AccountReport(models.Model):
 
         return action_vals
 
-    def _get_partner_and_general_ledger_initial_balance_line(self, options, parent_line_id, eval_dict, account_currency=None):
+    def _get_partner_and_general_ledger_initial_balance_line(self, options, parent_line_id, eval_dict, account_currency=None, level_shift=0):
         """ Helper to generate dynamic 'initial balance' lines, used by general ledger and partner ledger.
         """
         line_columns = []
@@ -61,6 +61,7 @@ class AccountReport(models.Model):
             'id': self._get_generic_line_id(None, None, parent_line_id=parent_line_id, markup='initial'),
             'class': 'o_account_reports_initial_balance',
             'name': _("Initial Balance"),
+            'level': 2 + level_shift,
             'parent_id': parent_line_id,
             'columns': line_columns,
         }
