@@ -22,6 +22,7 @@
 
     <record id="partner_ledger_multi_currency_report" model="account.report">
         <field name="name">Partner Ledger Multi Currency</field>
+        <field name="filter_account_type" eval="True"/>
         <field name="filter_journals" eval="True"/>
         <field name="filter_analytic" eval="True"/>
         <field name="filter_period_comparison" eval="False"/>
