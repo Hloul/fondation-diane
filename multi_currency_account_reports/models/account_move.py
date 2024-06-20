@@ -5,7 +5,7 @@ _logger = logging.getLogger(__name__)
 class AccountMoveLine(models.Model):
     _inherit = 'account.move.line'
 
-    company_currency_id2 = fields.Many2one(string='Second Company Currency', related='company_id.currency_id2',readonly=True)
+    company_currency_id2 = fields.Many2one(string='Second Company Currency', related='company_id.currency_id2',readonly=True, store=True)
     conversion_rate = fields.Float(string='Conversion Rate', compute='_compute_conversion_rate', inverse='_inverse_conversion_rate')
     custom_rate = fields.Float(string='Custom Rate', default=0)
     debit2 = fields.Monetary(string='Debit2', currency_field='company_currency_id2', default=0)
