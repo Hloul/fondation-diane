@@ -38,8 +38,10 @@ class TrialBalanceCustomHandler(models.AbstractModel):
 
                 if float_compare(debit2_value, credit2_value, precision_digits=self.env.company.currency_id.decimal_places) == 1:
                     new_debit2_value = debit2_value - credit2_value
+                    total_diff2_values[total_diff_values_key] += credit2_value
                 else:
                     new_credit2_value = (debit2_value - credit2_value) * -1
+                    total_diff2_values[total_diff_values_key] += debit2_value
 
                 _update_column(line, debit_column_key, new_debit_value)
                 _update_column(line, credit_column_key, new_credit_value)
@@ -49,6 +51,11 @@ class TrialBalanceCustomHandler(models.AbstractModel):
         lines = [line[1] for line in self.env['account.general.ledger.multi.currency.report.handler']._dynamic_lines_generator(report, options, all_column_groups_expression_totals)]
 
         total_diff_values = {
+            'initial_balance': 0.0,
+            'end_balance': 0.0,
+        }
+
+        total_diff2_values = {
             'initial_balance': 0.0,
             'end_balance': 0.0,
         }
@@ -79,12 +86,12 @@ class TrialBalanceCustomHandler(models.AbstractModel):
             total_line = lines[-1]
             _update_column(total_line, 0, total_line['columns'][0]['no_format'] - total_diff_values['initial_balance'], blank_if_zero=False)
             _update_column(total_line, 1, total_line['columns'][1]['no_format'] - total_diff_values['initial_balance'], blank_if_zero=False)
-            _update_column(total_line, 2, total_line['columns'][2]['no_format'] - total_diff_values['initial_balance'], blank_if_zero=False, currency=self.env.company.currency_id2)
-            _update_column(total_line, 3, total_line['columns'][3]['no_format'] - total_diff_values['initial_balance'], blank_if_zero=False, currency=self.env.company.currency_id2)
+            _update_column(total_line, 2, total_line['columns'][2]['no_format'] - total_diff2_values['initial_balance'], blank_if_zero=False, currency=self.env.company.currency_id2)
+            _update_column(total_line, 3, total_line['columns'][3]['no_format'] - total_diff2_values['initial_balance'], blank_if_zero=False, currency=self.env.company.currency_id2)
             _update_column(total_line, -4, total_line['columns'][-4]['no_format'] - total_diff_values['end_balance'], blank_if_zero=False)
             _update_column(total_line, -3, total_line['columns'][-3]['no_format'] - total_diff_values['end_balance'], blank_if_zero=False)
-            _update_column(total_line, -2, total_line['columns'][-2]['no_format'] - total_diff_values['end_balance'], blank_if_zero=False, currency=self.env.company.currency_id2)
-            _update_column(total_line, -1, total_line['columns'][-1]['no_format'] - total_diff_values['end_balance'], blank_if_zero=False, currency=self.env.company.currency_id2)
+            _update_column(total_line, -2, total_line['columns'][-2]['no_format'] - total_diff2_values['end_balance'], blank_if_zero=False, currency=self.env.company.currency_id2)
+            _update_column(total_line, -1, total_line['columns'][-1]['no_format'] - total_diff2_values['end_balance'], blank_if_zero=False, currency=self.env.company.currency_id2)
 
         return [(0, line) for line in lines]
 
